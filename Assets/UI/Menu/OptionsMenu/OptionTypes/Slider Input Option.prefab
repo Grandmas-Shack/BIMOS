@@ -92,38 +92,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2736036143859348950, guid: 267422f5691e3144489363d40840dee5, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2736036143859348950, guid: 267422f5691e3144489363d40840dee5, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2736036143859348950, guid: 267422f5691e3144489363d40840dee5, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 7360359055392942765}
-    - target: {fileID: 2736036143859348950, guid: 267422f5691e3144489363d40840dee5, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2736036143859348950, guid: 267422f5691e3144489363d40840dee5, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
-    - target: {fileID: 2736036143859348950, guid: 267422f5691e3144489363d40840dee5, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: TMPro.TMP_InputField, Unity.TextMeshPro
-      objectReference: {fileID: 0}
-    - target: {fileID: 2736036143859348950, guid: 267422f5691e3144489363d40840dee5, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2736036143859348950, guid: 267422f5691e3144489363d40840dee5, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 4697435762149129857, guid: 267422f5691e3144489363d40840dee5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -178,11 +146,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8569448940279775099, guid: 267422f5691e3144489363d40840dee5, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -50
+      value: -75
       objectReference: {fileID: 0}
     - target: {fileID: 8569448940279775099, guid: 267422f5691e3144489363d40840dee5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 25
+      value: 37.5
       objectReference: {fileID: 0}
     - target: {fileID: 8945700123628851728, guid: 267422f5691e3144489363d40840dee5, type: 3}
       propertyPath: m_Name
@@ -194,8 +162,28 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 641059472736282184, guid: 267422f5691e3144489363d40840dee5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4726959127327583386}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5525926292003582511, guid: 267422f5691e3144489363d40840dee5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6239067173352665944}
   m_SourcePrefab: {fileID: 100100000, guid: 267422f5691e3144489363d40840dee5, type: 3}
+--- !u!1 &2603812688172723851 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5525926292003582511, guid: 267422f5691e3144489363d40840dee5, type: 3}
+  m_PrefabInstance: {fileID: 7535245068944137380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6239067173352665944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2603812688172723851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a22094bc312542b4ba3c6dff074eaaf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.UI.Options.SliderInputFieldConnection
 --- !u!224 &6951043545800489708 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 641059472736282184, guid: 267422f5691e3144489363d40840dee5, type: 3}
@@ -224,10 +212,6 @@ PrefabInstance:
     - target: {fileID: 2178288526502612882, guid: 8ba786c5055024c4db71d33ef3d449ed, type: 3}
       propertyPath: m_KeyboardType
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2178288526502612882, guid: 8ba786c5055024c4db71d33ef3d449ed, type: 3}
-      propertyPath: m_CharacterLimit
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2178288526502612882, guid: 8ba786c5055024c4db71d33ef3d449ed, type: 3}
       propertyPath: m_OnFocusSelectAll
@@ -267,7 +251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4145108293278189989, guid: 8ba786c5055024c4db71d33ef3d449ed, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 50
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 4145108293278189989, guid: 8ba786c5055024c4db71d33ef3d449ed, type: 3}
       propertyPath: m_SizeDelta.y
@@ -335,14 +319,3 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4145108293278189989, guid: 8ba786c5055024c4db71d33ef3d449ed, type: 3}
   m_PrefabInstance: {fileID: 8655894637417456959}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7360359055392942765 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2178288526502612882, guid: 8ba786c5055024c4db71d33ef3d449ed, type: 3}
-  m_PrefabInstance: {fileID: 8655894637417456959}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

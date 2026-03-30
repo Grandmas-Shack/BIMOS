@@ -9,8 +9,8 @@ namespace KadenZombie8.BIMOS.UI.Options
 
         protected override void Awake()
         {
-            base.Awake();
             _toggle = GetComponentInChildren<Toggle>();
+            base.Awake();
         }
 
         private void OnEnable() => _toggle.onValueChanged.AddListener(Changed);
