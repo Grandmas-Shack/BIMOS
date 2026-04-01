@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5163798297902385634}
   - component: {fileID: 7989319427102688198}
-  - component: {fileID: 5225844358194675426}
   m_Layer: 5
   m_Name: Option
   m_TagString: Untagged
@@ -59,19 +58,6 @@ MonoBehaviour:
   m_FlexibleWidth: 3
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
---- !u!114 &5225844358194675426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629757466128543107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf670193e022f18498eaa3f7a50cf7d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.UI.Options.RevertToDefaultButton
-  _button: {fileID: 162107192251663009}
 --- !u!1 &5344034903224550732
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,6 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1206538619747837177}
   - component: {fileID: 347526451784492013}
+  - component: {fileID: 7572907576562101713}
   m_Layer: 5
   m_Name: Option
   m_TagString: Untagged
@@ -207,6 +194,19 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &7572907576562101713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844041748669834611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf670193e022f18498eaa3f7a50cf7d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.UI.Options.RevertToDefaultButton
+  _button: {fileID: 162107192251663009}
 --- !u!1001 &148847492464685266
 PrefabInstance:
   m_ObjectHideFlags: 0

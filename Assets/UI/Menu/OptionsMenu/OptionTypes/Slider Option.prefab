@@ -92,6 +92,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3078186902888968037, guid: fa5a8dcf60318e04fb7bf32cee7962ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078186902888968037, guid: fa5a8dcf60318e04fb7bf32cee7962ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078186902888968037, guid: fa5a8dcf60318e04fb7bf32cee7962ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1698734420803035003}
+    - target: {fileID: 3078186902888968037, guid: fa5a8dcf60318e04fb7bf32cee7962ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078186902888968037, guid: fa5a8dcf60318e04fb7bf32cee7962ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Revert
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078186902888968037, guid: fa5a8dcf60318e04fb7bf32cee7962ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: KadenZombie8.BIMOS.UI.Options.SliderOption, kadenzombie8.bimos
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078186902888968037, guid: fa5a8dcf60318e04fb7bf32cee7962ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5163798297902385634, guid: fa5a8dcf60318e04fb7bf32cee7962ec, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -150,13 +178,35 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1043810303356703019, guid: fa5a8dcf60318e04fb7bf32cee7962ec, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8569448940279775099}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8844041748669834611, guid: fa5a8dcf60318e04fb7bf32cee7962ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1698734420803035003}
   m_SourcePrefab: {fileID: 100100000, guid: fa5a8dcf60318e04fb7bf32cee7962ec, type: 3}
 --- !u!224 &641059472736282184 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1043810303356703019, guid: fa5a8dcf60318e04fb7bf32cee7962ec, type: 3}
   m_PrefabInstance: {fileID: 475652859252209507}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8945700123628851728 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8844041748669834611, guid: fa5a8dcf60318e04fb7bf32cee7962ec, type: 3}
+  m_PrefabInstance: {fileID: 475652859252209507}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1698734420803035003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8945700123628851728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be70759eed93b9e429c1e8502950aaa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.UI.Options.SliderOption
+  Key: 
+  DefaultValue: 0
 --- !u!1001 &7908168011164055071
 PrefabInstance:
   m_ObjectHideFlags: 0
