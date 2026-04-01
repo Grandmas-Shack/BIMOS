@@ -1185,9 +1185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4819932903971942261, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
       propertyPath: m_text
-      value: 'Smoothing
-
-'
+      value: Smoothing
       objectReference: {fileID: 0}
     - target: {fileID: 5578494388410018162, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
       propertyPath: m_Value
@@ -2228,9 +2226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4819932903971942261, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
       propertyPath: m_text
-      value: 'Sensitivity
-
-'
+      value: Sensitivity
       objectReference: {fileID: 0}
     - target: {fileID: 5578494388410018162, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
       propertyPath: m_MaxValue
@@ -2803,9 +2799,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6570161381245363674, guid: 71353b9b960f1a94f9b05fdbe73a9c74, type: 3}
       propertyPath: m_text
-      value: 'Physics rig
-
-'
+      value: Physics rig
       objectReference: {fileID: 0}
     - target: {fileID: 7456561623935337873, guid: 71353b9b960f1a94f9b05fdbe73a9c74, type: 3}
       propertyPath: m_Pivot.x
@@ -2915,9 +2909,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1688551705579820765, guid: c6e4a44dad855e044afe40bd0184c4ce, type: 3}
       propertyPath: m_text
-      value: 'Debug
-
-'
+      value: Debug
       objectReference: {fileID: 0}
     - target: {fileID: 3891322680809942829, guid: c6e4a44dad855e044afe40bd0184c4ce, type: 3}
       propertyPath: m_Group
@@ -3611,9 +3603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6614370704942224783, guid: 80dcc87033572db4a9eefd4ffcf615e0, type: 3}
       propertyPath: m_text
-      value: 'Camera visual
-
-'
+      value: Camera visual
       objectReference: {fileID: 0}
     - target: {fileID: 6742521027984742873, guid: 80dcc87033572db4a9eefd4ffcf615e0, type: 3}
       propertyPath: m_Value

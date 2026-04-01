@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace KadenZombie8.BIMOS.UI.Options
 {
-    public abstract class Option<T> : MonoBehaviour, IRevertible
+    public abstract class Option<T> : MonoBehaviour, IRevertible, IAppliable
     {
         public event Action OnValueChanged;
 
@@ -17,6 +17,8 @@ namespace KadenZombie8.BIMOS.UI.Options
 
         private T _currentValue;
         private T _savedValue;
+
+        public bool IsSavedValue => _currentValue.Equals(_savedValue);
 
         protected virtual void Awake()
         {
