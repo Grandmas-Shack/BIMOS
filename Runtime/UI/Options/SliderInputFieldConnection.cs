@@ -35,7 +35,7 @@ namespace KadenZombie8.BIMOS.UI.Options
 
         private void OnInputFieldValueChanged(string stringValue)
         {
-            if (!float.TryParse(stringValue, out float value)) return;
+            if (!float.TryParse(stringValue, out float value)) value = _slider.value;
             value = Mathf.Clamp(value, _slider.minValue, _slider.maxValue);
             _slider.value = value;
             _inputField.text = _slider.value.ToString();
