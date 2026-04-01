@@ -1,29 +1,31 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace KadenZombie8.BIMOS.UI.Options
 {
     public class Flatscreen : MonoBehaviour
     {
-        private Toggle _toggle;
+        private TMP_Dropdown _dropdown;
 
         [SerializeField]
         private Tabs _tabs;
 
-        private void Awake() => _toggle = GetComponentInChildren<Toggle>();
+        private void Awake() => _dropdown = GetComponentInChildren<TMP_Dropdown>();
 
-        private void OnEnable() => _toggle.onValueChanged.AddListener(OnValueChanged);
+        private void OnEnable() => _dropdown.onValueChanged.AddListener(OnValueChanged);
 
-        private void OnDisable() => _toggle.onValueChanged.RemoveListener(OnValueChanged);
+        private void OnDisable() => _dropdown.onValueChanged.RemoveListener(OnValueChanged);
 
-        private void OnValueChanged(bool isSelected)
+        private void OnValueChanged(int controlType)
         {
+            bool isFlatscreen = controlType == 1;
+
             foreach (var tab in _tabs.Enable)
-                tab.SetActive(isSelected);
+                tab.SetActive(isFlatscreen);
             foreach (var tab in _tabs.Disable)
-                tab.SetActive(!isSelected);
+                tab.SetActive(!isFlatscreen);
         }
     }
 

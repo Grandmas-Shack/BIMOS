@@ -13,6 +13,7 @@ namespace KadenZombie8.BIMOS.UI.Options
         {
             _slider = GetComponentInChildren<Slider>();
             _inputField = GetComponentInChildren<TMP_InputField>();
+            OnSliderValueChanged(_slider.value);
         }
 
         private void OnEnable()
