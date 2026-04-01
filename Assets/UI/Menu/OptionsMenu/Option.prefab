@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5163798297902385634}
   - component: {fileID: 7989319427102688198}
+  - component: {fileID: 5225844358194675426}
   m_Layer: 5
   m_Name: Option
   m_TagString: Untagged
@@ -58,6 +59,19 @@ MonoBehaviour:
   m_FlexibleWidth: 3
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &5225844358194675426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629757466128543107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf670193e022f18498eaa3f7a50cf7d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.UI.Options.RevertToDefaultButton
+  _button: {fileID: 162107192251663009}
 --- !u!1 &5344034903224550732
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,10 +416,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8905740183860450175, guid: 4d95d45acfdc98b41ad222dbb3dc6217, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8756023839835889592}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d95d45acfdc98b41ad222dbb3dc6217, type: 3}
 --- !u!224 &162107192251663008 stripped
 RectTransform:
@@ -417,17 +428,3 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8905740183860450175, guid: 4d95d45acfdc98b41ad222dbb3dc6217, type: 3}
   m_PrefabInstance: {fileID: 8766362377334477278}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8756023839835889592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 162107192251663009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
-  m_AspectMode: 2
-  m_AspectRatio: 1

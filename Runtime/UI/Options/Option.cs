@@ -1,14 +1,19 @@
+using System;
 using UnityEngine;
 
 namespace KadenZombie8.BIMOS.UI.Options
 {
-    public abstract class Option<T> : MonoBehaviour
+    public abstract class Option<T> : MonoBehaviour, IRevertible
     {
+        public event Action OnValueChanged;
+
         [SerializeField]
         protected string Key;
 
         [SerializeField]
         protected T DefaultValue;
+
+        public bool IsDefaultValue => _currentValue.Equals(DefaultValue);
 
         private T _currentValue;
         private T _savedValue;
@@ -20,17 +25,23 @@ namespace KadenZombie8.BIMOS.UI.Options
             ApplyValue(_currentValue);
         }
 
-        protected virtual void Changed(T value) => _currentValue = value;
-
-        public void Apply()
+        protected virtual void Changed(T value)
         {
-            _savedValue = _currentValue;
-            Save(_savedValue);
+            _currentValue = value;
+            OnValueChanged?.Invoke();
+        }
+
+        public void Apply() => Save(_currentValue);
+
+        public void Discard()
+        {
+            _currentValue = _savedValue;
+            ApplyValue(_currentValue);
         }
 
         public void Revert()
         {
-            _currentValue = _savedValue;
+            _currentValue = DefaultValue;
             ApplyValue(_currentValue);
         }
 
