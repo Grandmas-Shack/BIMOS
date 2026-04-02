@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace KadenZombie8.BIMOS.UI.Options
 {
-    public abstract class Option<T> : MonoBehaviour, IRevertible, IAppliable
+    public abstract class Option<T> : MonoBehaviour, IAppliable, IRevertible
     {
         public event Action OnValueChanged;
 
@@ -17,6 +17,8 @@ namespace KadenZombie8.BIMOS.UI.Options
 
         private T _currentValue;
         private T _savedValue;
+        
+        private ApplyOptions _applyOptions;
 
         public bool IsSavedValue => _currentValue.Equals(_savedValue);
 
@@ -24,6 +26,7 @@ namespace KadenZombie8.BIMOS.UI.Options
         {
             _savedValue = Load();
             _currentValue = _savedValue;
+            _applyOptions = GetComponentInParent<ApplyOptions>();
             ApplyValue(_currentValue);
         }
 
@@ -31,20 +34,32 @@ namespace KadenZombie8.BIMOS.UI.Options
         {
             _currentValue = value;
             OnValueChanged?.Invoke();
+
+            if (IsSavedValue)
+                _applyOptions.UnregisterOption(this);
+            else
+                _applyOptions.RegisterOption(this);
         }
 
-        public void Apply() => Save(_currentValue);
+        public void Apply()
+        {
+            Save(_currentValue);
+            _savedValue = _currentValue;
+            Changed(_currentValue);
+        }
 
         public void Discard()
         {
             _currentValue = _savedValue;
             ApplyValue(_currentValue);
+            Changed(_currentValue);
         }
 
         public void Revert()
         {
             _currentValue = DefaultValue;
             ApplyValue(_currentValue);
+            Changed(_currentValue);
         }
 
         protected abstract void ApplyValue(T value);

@@ -1141,6 +1141,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8732047998062190327}
     m_Modifications:
+    - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6520873619663951064}
+    - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Apply
+      objectReference: {fileID: 0}
+    - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: KadenZombie8.BIMOS.UI.Options.ApplyOptions, kadenzombie8.bimos
+      objectReference: {fileID: 0}
+    - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4122742487401416684, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -1225,6 +1253,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Apply
       objectReference: {fileID: 0}
+    - target: {fileID: 4122742487401416685, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8121462698801417748, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
       propertyPath: m_text
       value: Apply
@@ -1234,6 +1266,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
+--- !u!1 &8641045224248189240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4122742487401416685, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
+  m_PrefabInstance: {fileID: 5682914545989773013}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8641045224248189241 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4122742487401416684, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
@@ -1356,13 +1393,44 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1739482364372206199, guid: ab8b49e6d95258e488025f81372ede70, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5166724780389154622}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8753398139688055170, guid: ab8b49e6d95258e488025f81372ede70, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6520873619663951064}
+    - targetCorrespondingSourceObject: {fileID: 8753398139688055170, guid: ab8b49e6d95258e488025f81372ede70, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9100990254829110427}
   m_SourcePrefab: {fileID: 100100000, guid: ab8b49e6d95258e488025f81372ede70, type: 3}
 --- !u!1 &1763097296242076930 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8753398139688055170, guid: ab8b49e6d95258e488025f81372ede70, type: 3}
   m_PrefabInstance: {fileID: 6993411398694739072}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6520873619663951064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763097296242076930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49c47eaa4868505498e0cd33645d3eac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.UI.Options.ApplyOptions
+--- !u!114 &9100990254829110427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763097296242076930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082ba7ed5ae73df4e9fd3055aad23e19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.UI.Options.ApplyButton
+  _button: {fileID: 8641045224248189240}
 --- !u!224 &8732047998062190327 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1739482364372206199, guid: ab8b49e6d95258e488025f81372ede70, type: 3}
@@ -1510,22 +1578,30 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6520873619663951064}
+    - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 7796502698357373233}
     - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1763097296242076930}
     - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
@@ -1537,19 +1613,31 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: Discard
       objectReference: {fileID: 0}
     - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: KadenZombie8.BIMOS.UI.Options.ApplyOptions, kadenzombie8.bimos
       objectReference: {fileID: 0}
     - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
@@ -1558,6 +1646,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1278720473915353641, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4122742487401416684, guid: b53e820dade75994dbe07de7a43a6be3, type: 3}

@@ -6,5 +6,7 @@ namespace KadenZombie8.BIMOS.UI.Options
     {
         bool IsSavedValue { get; }
         event Action OnValueChanged;
+        void Apply();
+        void Discard();
     }
 }
