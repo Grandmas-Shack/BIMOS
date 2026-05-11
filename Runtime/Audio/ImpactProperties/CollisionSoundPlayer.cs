@@ -37,6 +37,7 @@ namespace KadenZombie8.BIMOS.Audio
             gameObject.transform.position = position;
             AudioSource audioSource = (AudioSource)gameObject.AddComponent(typeof(AudioSource));
             audioSource.resource = resource;
+            audioSource.spatialize = true;
             audioSource.spatialBlend = 1f;
             audioSource.volume = volume;
             audioSource.Play();
