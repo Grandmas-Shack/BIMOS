@@ -1,12 +1,12 @@
 {
   "name": "com.kadenzombie8.bimos",
   "version": "2.0.0",
-  "displayName": "BIMOS",
-  "description": "Open-source physics-based VR character controller inspired by Boneworks",
+  "displayName": "BIMOS Grandmas Branch",
+  "description": "Open-source physics-based VR character controller inspired by Boneworks. Forked from KadenZombie8",
   "unity": "6000.0",
-  "documentationUrl": "https://github.com/KadenZombie8/BIMOS/wiki",
-  "changelogUrl": "https://github.com/KadenZombie8/BIMOS/blob/main/CHANGELOG.md",
-  "licensesUrl": "https://github.com/KadenZombie8/BIMOS/blob/main/LICENSE.md",
+  "documentationUrl": "https://github.com/Grandmas-Shack/BIMOS/wiki",
+  "changelogUrl": "https://github.com/Grandmas-Shack/BIMOS/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/Grandmas-Shack/BIMOS/blob/main/LICENSE.md",
   "dependencies": {
     "com.unity.render-pipelines.universal": "17.0.3",
     "com.unity.animation.rigging": "1.3.0",
