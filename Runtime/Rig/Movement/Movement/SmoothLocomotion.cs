@@ -8,8 +8,6 @@ namespace KadenZombie8.BIMOS.Rig.Movement
     /// </summary>
     public class SmoothLocomotion : MonoBehaviour
     {
-        private ControllerRig _controllerRig;
-
         [SerializeField]
         [Tooltip("The walk speed of the character")]
         private float _defaultWalkSpeed = 1.5f;
@@ -26,6 +24,9 @@ namespace KadenZombie8.BIMOS.Rig.Movement
 
         [SerializeField]
         private InputActionReference _runAction;
+
+        [SerializeField]
+        private ControllerRig _controllerRig;
 
         public LocomotionSphere LocomotionSphere { get; private set; }
 
@@ -58,8 +59,6 @@ namespace KadenZombie8.BIMOS.Rig.Movement
 
             ResetWalkSpeed();
         }
-
-        private void Start() => _controllerRig = BIMOSRig.Instance.ControllerRig;
 
         private void OnEnable()
         {

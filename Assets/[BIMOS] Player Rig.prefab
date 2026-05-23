@@ -1874,6 +1874,7 @@ MonoBehaviour:
     Controller: {fileID: 8563664812807291384}
     PositionOffset: {x: 0, y: 0, z: 0}
     RotationOffset: {x: 0, y: 0, z: 0, w: 0}
+  _animator: {fileID: 2945637317176231005}
 --- !u!1 &2514652766759430098
 GameObject:
   m_ObjectHideFlags: 0
@@ -2940,6 +2941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ddac3625807fb489c5b2df105060c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Rig: {fileID: 0}
   Rigidbodies:
     LocomotionSphere: {fileID: 5217677170083806441}
     Knee: {fileID: 4107036072679230787}
@@ -3005,9 +3007,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _defaultWalkSpeed: 1.5
-  RunMode: 0
+  RunMode: 1
   _moveAction: {fileID: 2329931572188812770, guid: 0cd47f68cb724f8478ed745999f9d67a, type: 3}
   _runAction: {fileID: -6406039945800244612, guid: 0cd47f68cb724f8478ed745999f9d67a, type: 3}
+  _controllerRig: {fileID: 7251668691989030867}
   RunSpeedMultiplier: 2
   CrouchSpeedMultiplier: 0.5
 --- !u!114 &6258398633430799671
@@ -3023,6 +3026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetLegHeight: 0
+  _rig: {fileID: 6671873013947755651}
 --- !u!114 &9143494609847232379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3037,7 +3041,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CrouchAction: {fileID: -5873772996935874777, guid: 0cd47f68cb724f8478ed745999f9d67a, type: 3}
   CrouchSpeed: 4
-  VirtualCrouchMode: 0
+  _controllerRig: {fileID: 7251668691989030867}
+  VirtualCrouchMode: 1
 --- !u!114 &1585967732411247227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3099,6 +3104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnSpeed: 450
   _turnAction: {fileID: -6922838068034798914, guid: 0cd47f68cb724f8478ed745999f9d67a, type: 3}
+  ControllerRig: {fileID: 7251668691989030867}
 --- !u!114 &5568752332480941085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3976,6 +3982,7 @@ MonoBehaviour:
     Controller: {fileID: 5488886840134976617}
     PositionOffset: {x: 0, y: 0, z: 0}
     RotationOffset: {x: 0, y: 0, z: 0, w: 0}
+  _animator: {fileID: 2945637317176231005}
 --- !u!1 &3414075759266772195
 GameObject:
   m_ObjectHideFlags: 0
@@ -4681,6 +4688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beffb62625260b41898bae17f13ad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rig: {fileID: 6671873013947755651}
   Transforms:
     Camera: {fileID: 7935699982236817345}
     HeadCameraOffset: {fileID: 2083655086568588637}
