@@ -15,6 +15,9 @@ namespace KadenZombie8.BIMOS.Rig.Movement
         [Tooltip("The speed (in %/s) the legs can extend/retract at")]
         public float CrouchSpeed = 2.5f;
 
+        [SerializeField]
+        private ControllerRig _controllerRig;
+
         public float CrouchInputMagnitude { get; set; }
 
         public bool IsCrouchChanging => Mathf.Abs(CrouchInputMagnitude) >= 0.75f;
@@ -33,7 +36,6 @@ namespace KadenZombie8.BIMOS.Rig.Movement
         private IState<JumpStateMachine> _standState;
         private IState<JumpStateMachine> _compressState;
         private IState<JumpStateMachine> _pushState;
-        private ControllerRig _controllerRig;
         private bool _isCrouching;
 
         private void Awake()
@@ -78,7 +80,6 @@ namespace KadenZombie8.BIMOS.Rig.Movement
             _standState = _jumping.StateMachine.GetState<StandState>();
             _compressState = _jumping.StateMachine.GetState<CompressState>();
             _pushState = _jumping.StateMachine.GetState<PushState>();
-            _controllerRig = BIMOSRig.Instance.ControllerRig;
         }
 
         private void FixedUpdate()

@@ -25,7 +25,7 @@ namespace KadenZombie8.BIMOS.Rig.Spawning
             }
             Instance = this;
 
-            _player = BIMOSRig.Instance;
+            _player = BIMOS.LocalRig;
 
             if (!SpawnPoint)
             {

@@ -10,6 +10,7 @@ namespace KadenZombie8.BIMOS.Rig
 
     public class Hand : MonoBehaviour
     {
+        public BIMOSRig Rig;
         public HandAnimator HandAnimator;
         public Grabbable CurrentGrab;
         public HandInputReader HandInputReader;

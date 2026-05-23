@@ -30,11 +30,7 @@ namespace KadenZombie8.BIMOS.Rig.Movement
         private void Awake()
         {
             _virtualTurning = GetComponent<VirtualTurning>();
-        }
-
-        private void Start()
-        {
-            _controllerRig = BIMOSRig.Instance.ControllerRig;
+            _controllerRig = _virtualTurning.ControllerRig;
         }
 
         private void Turn(Vector2 vector)

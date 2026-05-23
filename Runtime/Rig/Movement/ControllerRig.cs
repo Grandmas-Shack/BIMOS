@@ -6,7 +6,9 @@ namespace KadenZombie8.BIMOS.Rig
     [DefaultExecutionOrder(-10)]
     public class ControllerRig : MonoBehaviour
     {
-        private BIMOSRig _player;
+        [SerializeField]
+        private BIMOSRig _rig;
+
         public ControllerRigTransforms Transforms;
         public float HeadsetStandingHeight = 1.65f;
 
@@ -16,7 +18,7 @@ namespace KadenZombie8.BIMOS.Rig
 
         public void Start()
         {
-            _player = BIMOSRig.Instance;
+            _rig = GetComponentInParent<BIMOSRig>();
 
             Transforms.Camera.GetComponent<Camera>().cullingMask = ~LayerMask.GetMask("BIMOSMenu");
             Transforms.MenuCamera.GetComponent<Camera>().cullingMask = LayerMask.GetMask("BIMOSMenu");
@@ -34,13 +36,13 @@ namespace KadenZombie8.BIMOS.Rig
 
         public void ScaleCharacter()
         {
-            float scaleFactor = _player.AnimationRig.AvatarEyeHeight / HeadsetStandingHeight;
+            float scaleFactor = _rig.AnimationRig.AvatarEyeHeight / HeadsetStandingHeight;
             transform.localScale = Vector3.one * scaleFactor;
         }
 
         private void Update()
         {
-            transform.position = _player.PhysicsRig.Rigidbodies.Pelvis.position;
+            transform.position = _rig.PhysicsRig.Rigidbodies.Pelvis.position;
         }
 
         [Serializable]

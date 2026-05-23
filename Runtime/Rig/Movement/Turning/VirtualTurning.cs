@@ -17,6 +17,8 @@ namespace KadenZombie8.BIMOS.Rig.Movement
         [SerializeField]
         private InputActionReference _turnAction;
 
+        public ControllerRig ControllerRig;
+
         private SnapTurn _snapTurn;
         private SmoothTurn _smoothTurn;
         private VirtualTurningMode _turningMode;

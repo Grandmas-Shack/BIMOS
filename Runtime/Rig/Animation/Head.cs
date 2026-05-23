@@ -1,26 +1,22 @@
 using UnityEngine;
 
-namespace KadenZombie8.BIMOS.Rig
+namespace KadenZombie8.BIMOS.Rig.Animation
 {
     public class Head : MonoBehaviour
     {
-        private BIMOSRig _player;
+        [SerializeField]
+        private Transform _character;
 
-        private void Start()
-        {
-            _player = BIMOSRig.Instance;
-        }
+        [SerializeField]
+        private Transform _headCameraOffset;
 
-        private void Update()
-        {
-            UpdateCharacter();
-        }
+        private void Update() => UpdateCharacter();
 
         public void UpdateCharacter()
         {
-            _player.AnimationRig.Transforms.Character.position = _player.ControllerRig.Transforms.HeadCameraOffset.position - Vector3.up * 1.65f;
-            Quaternion targetRotation = Quaternion.LookRotation(Vector3.Cross(_player.ControllerRig.Transforms.Camera.right, Vector3.up));
-            _player.AnimationRig.Transforms.Character.rotation = Quaternion.Lerp(_player.AnimationRig.Transforms.Character.rotation, targetRotation, Time.deltaTime * 5f);
+            _character.position = _headCameraOffset.position - Vector3.up * 1.65f;
+            var targetRotation = Quaternion.LookRotation(Vector3.Cross(_headCameraOffset.right, Vector3.up));
+            _character.rotation = Quaternion.Lerp(_character.rotation, targetRotation, Time.deltaTime * 5f);
         }
     }
 }

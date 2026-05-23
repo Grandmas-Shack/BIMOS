@@ -8,6 +8,8 @@ namespace KadenZombie8.BIMOS.Rig.Movement
     /// </summary>
     public class PhysicsRig : MonoBehaviour
     {
+        public BIMOSRig Rig;
+
         public PhysicsRigRigidbodies Rigidbodies;
         public PhysicsRigColliders Colliders;
         public PhysicsRigJoints Joints;
@@ -30,6 +32,7 @@ namespace KadenZombie8.BIMOS.Rig.Movement
 
         private void Awake()
         {
+            Rig = GetComponentInParent<BIMOSRig>();
             PlayerLayerMask = LayerMask.GetMask("Player");
             Crouching = GetComponent<Crouching>();
             Movement = GetComponent<SmoothLocomotion>();

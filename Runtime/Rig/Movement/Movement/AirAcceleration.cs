@@ -6,6 +6,7 @@ namespace KadenZombie8.BIMOS.Rig.Movement
     /// <summary>
     /// Handles character's acceleration while in the air
     /// </summary>
+    [RequireComponent(typeof(PhysicsRig))]
     public class AirAcceleration : MonoBehaviour
     {
         [SerializeField]
@@ -29,7 +30,7 @@ namespace KadenZombie8.BIMOS.Rig.Movement
             _moveAction.action.Enable();
         }
 
-        private void Start() => _physicsRigRigidbodies = BIMOSRig.Instance.PhysicsRig.Rigidbodies;
+        private void Start() => _physicsRigRigidbodies = GetComponent<PhysicsRig>().Rigidbodies;
 
         private void OnEnable()
         {

@@ -16,6 +16,9 @@ namespace KadenZombie8.BIMOS.Rig
         [SerializeField]
         private Transform _controller;
 
+        [SerializeField]
+        private Transform _pelvis;
+
         private Transform _upperArmBone;
         private Transform _lowerArmBone;
         private Transform _handBone;
@@ -23,7 +26,6 @@ namespace KadenZombie8.BIMOS.Rig
         private Transform _hint;
 
         private TwoBoneIKConstraint _constraint;
-        private Transform _pelvis;
 
         private Vector3 _targetElbowDirection;
         private Vector3 _smoothElbowDirection;
@@ -131,8 +133,6 @@ namespace KadenZombie8.BIMOS.Rig
             _lowerArmBone = _constraint.data.mid;
             _handBone = _constraint.data.tip;
             _hint = _constraint.data.hint;
-
-            _pelvis = BIMOSRig.Instance.PhysicsRig.Rigidbodies.Pelvis.transform;
         }
 
         private void LateUpdate()
