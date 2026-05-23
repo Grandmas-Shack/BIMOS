@@ -1,3 +1,4 @@
+using KadenZombie8.BIMOS.Rig.Animation;
 using KadenZombie8.BIMOS.Rig.Movement;
 using UnityEngine;
 

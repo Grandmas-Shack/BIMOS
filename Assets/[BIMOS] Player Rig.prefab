@@ -1402,6 +1402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.Rig.ElbowPrediction
   _handedness: 1
   _controller: {fileID: 8105584686134532683}
+  _pelvis: {fileID: 8556203494894390205}
 --- !u!1 &2053210023924917134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1881,6 +1882,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4415626930040875581}
   - component: {fileID: 5579777916457643195}
+  - component: {fileID: 285704733958305423}
   - component: {fileID: 8896784524709929857}
   m_Layer: 0
   m_Name: RightFootAnchor
@@ -2002,6 +2004,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &285704733958305423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2514652766759430098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88caf7cf8b05a014e8178225c641f4f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.Foot
+  Anchor: {fileID: 4415626930040875581}
+  Target: {fileID: 1760722161463643028}
+  Offset: 0.08
 --- !u!114 &8896784524709929857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3431,6 +3448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.Rig.ElbowPrediction
   _handedness: 0
   _controller: {fileID: 302060809740126155}
+  _pelvis: {fileID: 8556203494894390205}
 --- !u!1 &3259180518487581369
 GameObject:
   m_ObjectHideFlags: 0
@@ -5773,6 +5791,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2235958510425354998}
   - component: {fileID: 5756231622068757335}
+  - component: {fileID: 4935811338727835309}
   - component: {fileID: 1373511581752282011}
   m_Layer: 0
   m_Name: LeftFootAnchor
@@ -5894,6 +5913,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4935811338727835309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4448399109620659579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88caf7cf8b05a014e8178225c641f4f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.Foot
+  Anchor: {fileID: 2235958510425354998}
+  Target: {fileID: 2894309176576569094}
+  Offset: -0.08
 --- !u!114 &1373511581752282011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11859,6 +11893,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec7c69e04e263c42a3eeff213547302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _leftFoot: {fileID: 4935811338727835309}
+  _rightFoot: {fileID: 285704733958305423}
+  _locomotionSphere: {fileID: 5715720381970918571}
+  _hips: {fileID: 6855366230050040258}
+  _character: {fileID: 6304793145192069567}
+  _locomotionSphereRigidbody: {fileID: 5217677170083806441}
+  _smoothLocomotion: {fileID: 8683728267804074144}
 --- !u!1 &8775899912690175651
 GameObject:
   m_ObjectHideFlags: 0
@@ -12511,6 +12552,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1163419783305772112, guid: e971ed3504ad10845a158c373b7249c2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163419783305772112, guid: e971ed3504ad10845a158c373b7249c2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163419783305772112, guid: e971ed3504ad10845a158c373b7249c2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1355936781877183550, guid: e971ed3504ad10845a158c373b7249c2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -12529,6 +12582,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1355936781877183550, guid: e971ed3504ad10845a158c373b7249c2, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3660942015390666122, guid: e971ed3504ad10845a158c373b7249c2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3660942015390666122, guid: e971ed3504ad10845a158c373b7249c2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3660942015390666122, guid: e971ed3504ad10845a158c373b7249c2, type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3748935375490256055, guid: e971ed3504ad10845a158c373b7249c2, type: 3}
