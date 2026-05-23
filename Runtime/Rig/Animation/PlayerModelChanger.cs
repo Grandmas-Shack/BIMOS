@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using KadenZombie8.BIMOS.Rig;
-using UnityEditor;
 using UnityEngine;
 
 namespace KadenZombie8.BIMOS.Editor

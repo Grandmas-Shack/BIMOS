@@ -1,25 +1,26 @@
 using UnityEngine;
 
-namespace KadenZombie8.BIMOS.Rig
+namespace KadenZombie8.BIMOS.Rig.Animation
 {
     public class Hips : MonoBehaviour
     {
-        private BIMOSRig _rig;
+        [SerializeField]
+        private AnimationRig _animationRig;
+
+        [SerializeField]
+        private Rigidbody _locomotionSphereRigidbody;
+
+        [SerializeField]
+        private Transform _headCameraOffset;
 
         [SerializeField]
         private AnimationCurve _hipsBackCurve = AnimationCurve.Linear(0f, 0f, 1f, 0.5f);
 
-        private Rigidbody _locomotionSphereRigidbody;
-
         private float _spineLength;
-        private Transform _headCameraOffset;
 
         private void Start()
         {
-            _rig = BIMOSRig.Instance;
-            _locomotionSphereRigidbody = _rig.PhysicsRig.Rigidbodies.LocomotionSphere;
-            _headCameraOffset = _rig.ControllerRig.Transforms.HeadCameraOffset;
-            _spineLength = Vector3.Distance(_rig.AnimationRig.Transforms.Head.position, _rig.AnimationRig.Transforms.Hips.position);
+            _spineLength = Vector3.Distance(_animationRig.Transforms.Head.position, _animationRig.Transforms.Hips.position);
         }
 
         void Update()

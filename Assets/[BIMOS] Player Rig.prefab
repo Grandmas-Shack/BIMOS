@@ -314,6 +314,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a88f7fc0c80d1cd4c9436555901239a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _character: {fileID: 6304793145192069567}
+  _headCameraOffset: {fileID: 2083655086568588637}
 --- !u!1 &791744955362359412
 GameObject:
   m_ObjectHideFlags: 0
@@ -3695,6 +3697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3de319d97c51fb44a4d581ca3437f99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Rig: {fileID: 6671873013947755651}
   HandAnimator: {fileID: 130031883402245643}
   CurrentGrab: {fileID: 0}
   HandInputReader: {fileID: 4166488413971264423}
@@ -4958,6 +4961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3de319d97c51fb44a4d581ca3437f99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Rig: {fileID: 6671873013947755651}
   HandAnimator: {fileID: 7693680956307982394}
   CurrentGrab: {fileID: 0}
   HandInputReader: {fileID: 2670558484249623212}
@@ -11340,6 +11344,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9af7c4dce701e784683716c69618b911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animationRig: {fileID: 5003449384936182098}
+  _locomotionSphereRigidbody: {fileID: 5217677170083806441}
+  _headCameraOffset: {fileID: 2083655086568588637}
   _hipsBackCurve:
     serializedVersion: 2
     m_Curve:
