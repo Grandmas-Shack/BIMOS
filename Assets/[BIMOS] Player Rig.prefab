@@ -3247,6 +3247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2771187932956860478}
   - component: {fileID: 6671873013947755651}
+  - component: {fileID: 7962625414823606531}
   - component: {fileID: 4876986460583416184}
   m_Layer: 0
   m_Name: '[BIMOS] Player Rig'
@@ -3290,6 +3291,18 @@ MonoBehaviour:
   ControllerRig: {fileID: 7251668691989030867}
   PhysicsRig: {fileID: 1361669725724948971}
   AnimationRig: {fileID: 5003449384936182098}
+--- !u!114 &7962625414823606531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169780607551956412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e81d709b07b63a408177749523ada62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.LocalPlayer
 --- !u!114 &4876986460583416184
 MonoBehaviour:
   m_ObjectHideFlags: 0

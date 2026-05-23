@@ -10,21 +10,9 @@ namespace KadenZombie8.BIMOS.Rig
     {
         public event Action<BIMOSRig> OnDisabled;
 
-        public static BIMOSRig LocalRig { get; private set; }
-
         public ControllerRig ControllerRig;
         public PhysicsRig PhysicsRig;
         public AnimationRig AnimationRig;
-
-        private void Awake()
-        {
-            if (LocalRig != null && LocalRig != this)
-            {
-                Destroy(gameObject);
-                return;
-            }
-            LocalRig = this;
-        }
 
         private void OnDisable() => OnDisabled?.Invoke(this);
     }
