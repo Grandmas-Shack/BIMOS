@@ -414,7 +414,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Menu",
+                    "name": "ToggleMenu",
                     "type": "Button",
                     "id": "465e4c32-3a13-46f3-abdf-2b27e0141983",
                     "expectedControlType": "",
@@ -662,7 +662,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Menu",
+                    "action": "ToggleMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -673,29 +673,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Menu",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3395bf84-0bbe-44e4-bc24-20ed31d3c173",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Menu",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "43954881-9994-4b01-bede-8547666b1398",
-                    "path": "<Gamepad>/start",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Menu",
+                    "action": "ToggleMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -1168,6 +1146,15 @@
                     "processors": "",
                     "interactions": "MultiTap(tapDelay=0.2),Tap",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ToggleFlatMenu",
+                    "type": "Button",
+                    "id": "6aa47a75-4379-45c6-87e6-c1320cded077",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1379,6 +1366,28 @@
                     "action": "Scroll",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "a636931f-55a8-4447-96d7-18e2d5cf0b3f",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleFlatMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e3a9e5c9-d521-4afc-b6de-a8f0e00bc61f",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleFlatMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
