@@ -29,7 +29,7 @@ namespace KadenZombie8.BIMOS
             var isMenuShown = _menuCanvas.activeInHierarchy;
             isMenuShown = !isMenuShown;
             _menuCanvas.SetActive(isMenuShown);
-            _screenModeCamera.enabled = !isMenuShown;
+            _screenModeCamera.IsActive = !isMenuShown;
         }
     }
 }
