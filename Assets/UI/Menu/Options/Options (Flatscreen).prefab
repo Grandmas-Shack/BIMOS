@@ -640,7 +640,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 981278695305983054, guid: 80dcc87033572db4a9eefd4ffcf615e0, type: 3}
       propertyPath: m_Name
-      value: FlatControls
+      value: ControlType
       objectReference: {fileID: 0}
     - target: {fileID: 3497913636881602783, guid: 80dcc87033572db4a9eefd4ffcf615e0, type: 3}
       propertyPath: m_AnchorMax.y
@@ -799,13 +799,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b234f339bca1ea94783a68ca257512a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.UI.Options.Flatscreen
-  _tabs:
-    Enable:
-    - {fileID: 978639326185260583}
-    - {fileID: 1597667638777223413}
-    - {fileID: 8943788200463695513}
-    Disable:
-    - {fileID: 828421160620912947}
 --- !u!224 &7743099347006622891 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7465867165413127620, guid: 80dcc87033572db4a9eefd4ffcf615e0, type: 3}
@@ -2495,7 +2488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3891322680809942829, guid: c6e4a44dad855e044afe40bd0184c4ce, type: 3}
       propertyPath: m_IsOn
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3891322680809942829, guid: c6e4a44dad855e044afe40bd0184c4ce, type: 3}
       propertyPath: m_Group

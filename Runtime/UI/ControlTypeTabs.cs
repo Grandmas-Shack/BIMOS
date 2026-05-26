@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+using KadenZombie8.BIMOS.Settings;
+using KadenZombie8.BIMOS.UI.Options;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace KadenZombie8.BIMOS.UI
+{
+    /// <summary>
+    /// Enables and disables tabs depending on if flatscreen mode is active.
+    /// </summary>
+    public class ControlTypeTabs : MonoBehaviour
+    {
+        [SerializeField]
+        private Tabs _flatscreenTabs;
+
+        [SerializeField]
+        private Option<int> _option;
+
+        [SerializeField]
+        private Toggle _initialSpectatorToggle;
+
+        [SerializeField]
+        private Toggle _initialFlatscreenToggle;
+
+        [SerializeField]
+        private string _key = "BIMOS_ControlType";
+
+        [SerializeField]
+        private int _defaultValue = 0;
+
+        private void Awake()
+        {
+            bool isFlatscreen = BIMOSPrefs.GetInt(_key, _defaultValue) == 1;
+            UpdateTabs(isFlatscreen);
+            if (isFlatscreen)
+                _initialFlatscreenToggle.isOn = true;
+            else
+                _initialSpectatorToggle.isOn = true;
+        }
+
+        private void OnEnable() => _option.OnValueChanged += OnValueChanged;
+
+        private void OnDisable() => _option.OnValueChanged -= OnValueChanged;
+
+        private void OnValueChanged()
+        {
+            bool isFlatscreen = _option.CurrentValue == 1;
+            UpdateTabs(isFlatscreen);
+        }
+
+        public void UpdateTabs(bool isFlatscreen)
+        {
+            foreach (var tab in _flatscreenTabs.Enable)
+                tab.SetActive(isFlatscreen);
+            foreach (var tab in _flatscreenTabs.Disable)
+                tab.SetActive(!isFlatscreen);
+        }
+    }
+
+    [Serializable]
+    public struct Tabs
+    {
+        public List<GameObject> Enable;
+        public List<GameObject> Disable;
+    }
+}

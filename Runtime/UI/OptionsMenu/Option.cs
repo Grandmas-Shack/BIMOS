@@ -13,26 +13,26 @@ namespace KadenZombie8.BIMOS.UI.Options
         [SerializeField]
         protected T DefaultValue;
 
-        public bool IsDefaultValue => _currentValue.Equals(DefaultValue);
+        public bool IsDefaultValue => CurrentValue.Equals(DefaultValue);
 
-        private T _currentValue;
+        public T CurrentValue { get; private set; }
         private T _savedValue;
         
         private ApplyOptions _applyOptions;
 
-        public bool IsSavedValue => _currentValue.Equals(_savedValue);
+        public bool IsSavedValue => CurrentValue.Equals(_savedValue);
 
         protected virtual void Awake()
         {
             _savedValue = Load();
-            _currentValue = _savedValue;
+            CurrentValue = _savedValue;
             _applyOptions = GetComponentInParent<ApplyOptions>();
-            ApplyValue(_currentValue);
+            ApplyValue(CurrentValue);
         }
 
         protected virtual void Changed(T value)
         {
-            _currentValue = value;
+            CurrentValue = value;
             OnValueChanged?.Invoke();
 
             if (IsSavedValue)
@@ -43,23 +43,23 @@ namespace KadenZombie8.BIMOS.UI.Options
 
         public void Apply()
         {
-            Save(_currentValue);
-            _savedValue = _currentValue;
-            Changed(_currentValue);
+            Save(CurrentValue);
+            _savedValue = CurrentValue;
+            Changed(CurrentValue);
         }
 
         public void Discard()
         {
-            _currentValue = _savedValue;
-            ApplyValue(_currentValue);
-            Changed(_currentValue);
+            CurrentValue = _savedValue;
+            ApplyValue(CurrentValue);
+            Changed(CurrentValue);
         }
 
         public void Revert()
         {
-            _currentValue = DefaultValue;
-            ApplyValue(_currentValue);
-            Changed(_currentValue);
+            CurrentValue = DefaultValue;
+            ApplyValue(CurrentValue);
+            Changed(CurrentValue);
         }
 
         protected abstract void ApplyValue(T value);
