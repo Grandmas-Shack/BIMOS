@@ -13,6 +13,9 @@ namespace KadenZombie8.BIMOS
         private InputActionReference _menuButtonReference;
 
         [SerializeField]
+        private InputActionMap _map;
+
+        [SerializeField]
         private GameObject _menuCanvas;
 
         [SerializeField]
@@ -20,15 +23,22 @@ namespace KadenZombie8.BIMOS
 
         private void Awake() => _menuButtonReference.action.Enable();
 
-        private void OnEnable() => _menuButtonReference.action.performed += ToggleMenu;
+        private void OnEnable() => _menuButtonReference.action.performed += ToggleMenuButton;
 
-        private void OnDisable() => _menuButtonReference.action.performed -= ToggleMenu;
+        private void OnDisable() => _menuButtonReference.action.performed -= ToggleMenuButton;
 
-        public void ToggleMenu(InputAction.CallbackContext _)
+        public void ToggleMenuButton(InputAction.CallbackContext _) => ToggleMenu();
+
+        public void ToggleMenu()
         {
             var showMenu = !_menuCanvas.activeSelf;
             _menuCanvas.SetActive(showMenu);
             _screenModeCamera.IsActive = !showMenu;
+
+            if (showMenu)
+                _map.Disable();
+            else
+                _map.Enable();
         }
     }
 }

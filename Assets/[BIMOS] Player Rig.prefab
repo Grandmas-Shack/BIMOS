@@ -8964,6 +8964,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.MenuToggleFlatscreen
   _menuButtonReference: {fileID: -5255308680454823498, guid: 0cd47f68cb724f8478ed745999f9d67a, type: 3}
+  _map:
+    m_Name: 
+    m_Id: 
+    m_Asset: {fileID: 0}
+    m_Actions: []
+    m_Bindings: []
   _menuCanvas: {fileID: 6401120079088334818}
   _screenModeCamera: {fileID: 1785471339049578779}
 --- !u!1 &6323588199804068822
@@ -12713,11 +12719,35 @@ PrefabInstance:
       objectReference: {fileID: 1828136461564800906}
     - target: {fileID: 1016168841495035386, guid: ed5d7d8222c766e4bbc5ea99c76661a4, type: 3}
       propertyPath: m_Name
-      value: Pause
+      value: Menu
       objectReference: {fileID: 0}
-    - target: {fileID: 1016168841495035386, guid: ed5d7d8222c766e4bbc5ea99c76661a4, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 4500525206204949789, guid: ed5d7d8222c766e4bbc5ea99c76661a4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500525206204949789, guid: ed5d7d8222c766e4bbc5ea99c76661a4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500525206204949789, guid: ed5d7d8222c766e4bbc5ea99c76661a4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5602540935969928316}
+    - target: {fileID: 4500525206204949789, guid: ed5d7d8222c766e4bbc5ea99c76661a4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500525206204949789, guid: ed5d7d8222c766e4bbc5ea99c76661a4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500525206204949789, guid: ed5d7d8222c766e4bbc5ea99c76661a4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: KadenZombie8.BIMOS.MenuToggleFlatscreen, kadenzombie8.bimos
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500525206204949789, guid: ed5d7d8222c766e4bbc5ea99c76661a4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8017419887842168335, guid: ed5d7d8222c766e4bbc5ea99c76661a4, type: 3}
       propertyPath: m_Pivot.x
@@ -12745,7 +12775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8017419887842168335, guid: ed5d7d8222c766e4bbc5ea99c76661a4, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 240
+      value: 190
       objectReference: {fileID: 0}
     - target: {fileID: 8017419887842168335, guid: ed5d7d8222c766e4bbc5ea99c76661a4, type: 3}
       propertyPath: m_SizeDelta.y

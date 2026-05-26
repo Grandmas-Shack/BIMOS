@@ -286,7 +286,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3384540637090804832, guid: 15692485aae9a5645b5fafba27cc1d09, type: 3}
       propertyPath: m_text
-      value: PAUSED
+      value: MENU
       objectReference: {fileID: 0}
     - target: {fileID: 3384540637090804832, guid: 15692485aae9a5645b5fafba27cc1d09, type: 3}
       propertyPath: m_fontSize
@@ -542,7 +542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1739482364372206199, guid: ab8b49e6d95258e488025f81372ede70, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 240
+      value: 190
       objectReference: {fileID: 0}
     - target: {fileID: 1739482364372206199, guid: ab8b49e6d95258e488025f81372ede70, type: 3}
       propertyPath: m_SizeDelta.y
