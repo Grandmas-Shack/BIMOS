@@ -24,12 +24,11 @@ namespace KadenZombie8.BIMOS
 
         private void OnDisable() => _menuButtonReference.action.performed -= ToggleMenu;
 
-        private void ToggleMenu(InputAction.CallbackContext _)
+        public void ToggleMenu(InputAction.CallbackContext _)
         {
-            var isMenuShown = _menuCanvas.activeInHierarchy;
-            isMenuShown = !isMenuShown;
-            _menuCanvas.SetActive(isMenuShown);
-            _screenModeCamera.IsActive = !isMenuShown;
+            var showMenu = !_menuCanvas.activeSelf;
+            _menuCanvas.SetActive(showMenu);
+            _screenModeCamera.IsActive = !showMenu;
         }
     }
 }
