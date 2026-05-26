@@ -24,8 +24,6 @@ namespace KadenZombie8.BIMOS
         [SerializeField]
         ScreenModeCamera _screenModeCamera;
 
-        private readonly int mouseIndex = 1;
-
         private void Awake() => _menuButtonReference.action.Enable();
 
         private void OnEnable() => _menuButtonReference.action.performed += ToggleMenuButton;
@@ -39,17 +37,6 @@ namespace KadenZombie8.BIMOS
             var showMenu = !_menuCanvas.activeSelf;
             _menuCanvas.SetActive(showMenu);
             _screenModeCamera.IsActive = !showMenu;
-
-            if (showMenu)
-            {
-                _leftGripReference.action.ApplyBindingOverride(mouseIndex, new InputBinding() { overridePath = "" });
-                _rightGripReference.action.ApplyBindingOverride(mouseIndex, new InputBinding() { overridePath = "" });
-            }
-            else
-            {
-                _leftGripReference.asset.RemoveAllBindingOverrides();
-                _rightGripReference.asset.RemoveAllBindingOverrides();
-            }
         }
     }
 }
