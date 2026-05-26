@@ -12888,6 +12888,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -21.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1965911159726580959, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
+      propertyPath: _onNoUnsavedChanges.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965911159726580959, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
+      propertyPath: _onNoUnsavedChanges.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965911159726580959, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
+      propertyPath: _onNoUnsavedChanges.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 4103990047299816174}
+    - target: {fileID: 1965911159726580959, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
+      propertyPath: _onNoUnsavedChanges.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965911159726580959, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
+      propertyPath: _onNoUnsavedChanges.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965911159726580959, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
+      propertyPath: _onNoUnsavedChanges.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965911159726580959, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
+      propertyPath: _onNoUnsavedChanges.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965911159726580959, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
+      propertyPath: _onNoUnsavedChanges.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2087930238447276479, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -13048,118 +13080,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8831113652143067061, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
-      propertyPath: _tabs
-      value: 
-      objectReference: {fileID: 4844049430739176136}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1762520812181779288, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5491625806265277587}
-    - targetCorrespondingSourceObject: {fileID: 1762520812181779288, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4844049430739176136}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
 --- !u!1 &1828136461564800906 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4774497549795847977, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
-  m_PrefabInstance: {fileID: 6565320632556290211}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2810813170924944954 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8943788200463695513, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
-  m_PrefabInstance: {fileID: 6565320632556290211}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2908367607308086810 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8304686887324774073, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
-  m_PrefabInstance: {fileID: 6565320632556290211}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5792632960540111248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &3366281351570397454 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8479111900405143981, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
-  m_PrefabInstance: {fileID: 6565320632556290211}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6235347056543630980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4585706045615288656 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7259528883627438579, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
-  m_PrefabInstance: {fileID: 6565320632556290211}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c21991f010bca8c48a8a8ce2c65023cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.UI.Options.DropdownOption
---- !u!1 &4857430180993201147 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1762520812181779288, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
-  m_PrefabInstance: {fileID: 6565320632556290211}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5491625806265277587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4857430180993201147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f483426ec2625c458bc1b738ae9659f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.InitialTab
---- !u!114 &4844049430739176136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4857430180993201147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0be869b9fd56e034c99c98a55c5c6bb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.UI.ControlTypeTabs
-  _flatscreenTabs:
-    Enable:
-    - {fileID: 6235347056543630980}
-    - {fileID: 5562150134906329174}
-    - {fileID: 2810813170924944954}
-    Disable:
-    - {fileID: 5792632960540111248}
-  _option: {fileID: 4585706045615288656}
-  _initialSpectatorToggle: {fileID: 2908367607308086810}
-  _initialFlatscreenToggle: {fileID: 3366281351570397454}
-  _key: BIMOS_ControlType
-  _defaultValue: 0
---- !u!1 &5562150134906329174 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1597667638777223413, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
-  m_PrefabInstance: {fileID: 6565320632556290211}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5792632960540111248 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 828421160620912947, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
-  m_PrefabInstance: {fileID: 6565320632556290211}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6235347056543630980 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 978639326185260583, guid: 5e6bbdbc1ec5c1c49981d4bfa2e01c63, type: 3}
   m_PrefabInstance: {fileID: 6565320632556290211}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &8648996682440105087 stripped

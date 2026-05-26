@@ -1400,6 +1400,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8753398139688055170, guid: ab8b49e6d95258e488025f81372ede70, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9100990254829110427}
+    - targetCorrespondingSourceObject: {fileID: 8753398139688055170, guid: ab8b49e6d95258e488025f81372ede70, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4719203237281048308}
   m_SourcePrefab: {fileID: 100100000, guid: ab8b49e6d95258e488025f81372ede70, type: 3}
 --- !u!1 &1763097296242076930 stripped
 GameObject:
@@ -1431,6 +1434,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.UI.Options.ApplyButton
   _button: {fileID: 8641045224248189240}
+--- !u!114 &4719203237281048308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763097296242076930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b78eb6c0c6d24ed478242c2dd7a584e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.UI.Options.DiscardPopup
+  _onHasUnsavedChanges:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7796502698357373233}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  _onNoUnsavedChanges:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1763097296242076930}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &8732047998062190327 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1739482364372206199, guid: ab8b49e6d95258e488025f81372ede70, type: 3}
@@ -1764,7 +1809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5989658377077800635, guid: 4d95d45acfdc98b41ad222dbb3dc6217, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5989658377077800635, guid: 4d95d45acfdc98b41ad222dbb3dc6217, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -1773,7 +1818,7 @@ PrefabInstance:
     - target: {fileID: 5989658377077800635, guid: 4d95d45acfdc98b41ad222dbb3dc6217, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 7796502698357373233}
+      objectReference: {fileID: 4719203237281048308}
     - target: {fileID: 5989658377077800635, guid: 4d95d45acfdc98b41ad222dbb3dc6217, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -1784,7 +1829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5989658377077800635, guid: 4d95d45acfdc98b41ad222dbb3dc6217, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: BackPressed
       objectReference: {fileID: 0}
     - target: {fileID: 5989658377077800635, guid: 4d95d45acfdc98b41ad222dbb3dc6217, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -1792,7 +1837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5989658377077800635, guid: 4d95d45acfdc98b41ad222dbb3dc6217, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: KadenZombie8.BIMOS.UI.Options.DiscardPopup, kadenzombie8.bimos
       objectReference: {fileID: 0}
     - target: {fileID: 5989658377077800635, guid: 4d95d45acfdc98b41ad222dbb3dc6217, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
