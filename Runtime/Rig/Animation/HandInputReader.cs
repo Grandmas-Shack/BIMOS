@@ -196,7 +196,7 @@ namespace KadenZombie8.BIMOS.Rig
 
         private void OnTriggerTouched(InputAction.CallbackContext callbackContext)
         {
-            TriggerTouched = callbackContext.performed ? true : false;
+            TriggerTouched = callbackContext.performed;
         }
 
         private void OnGrip()
@@ -206,12 +206,12 @@ namespace KadenZombie8.BIMOS.Rig
 
         private void OnThumbrestTouched(InputAction.CallbackContext callbackContext)
         {
-            ThumbrestTouched = callbackContext.performed ? true : false;
+            ThumbrestTouched = callbackContext.performed;
         }
 
         private void OnPrimaryTouched(InputAction.CallbackContext callbackContext)
         {
-            PrimaryTouched = callbackContext.performed ? true : false;
+            PrimaryTouched = callbackContext.performed;
         }
 
         private void OnPrimaryButton(InputAction.CallbackContext callbackContext)
@@ -247,12 +247,9 @@ namespace KadenZombie8.BIMOS.Rig
 
         private void OnThumbstickTouched(InputAction.CallbackContext callbackContext)
         {
-            ThumbstickTouched = callbackContext.performed ? true : false;
+            ThumbstickTouched = callbackContext.performed;
         }
 
-        private bool IsButtonDown(InputAction.CallbackContext callbackContext)
-        {
-            return callbackContext.performed;
-        }
+        private bool IsButtonDown(InputAction.CallbackContext callbackContext) => callbackContext.performed;
     }
 }
