@@ -38,8 +38,8 @@ namespace KadenZombie8.BIMOS.Rig.Spawning
 
             _starterPropInstance = Instantiate(
                 StarterProp,
-                BIMOS.LocalRig.ControllerRig.transform.TransformPoint(StarterPropOffset),
-                BIMOS.LocalRig.ControllerRig.transform.rotation
+                BIMOSUtils.LocalRig.ControllerRig.transform.TransformPoint(StarterPropOffset),
+                BIMOSUtils.LocalRig.ControllerRig.transform.rotation
             );
         }
     }

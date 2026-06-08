@@ -2,7 +2,7 @@ using KadenZombie8.BIMOS.Settings;
 
 namespace KadenZombie8.BIMOS.Rig
 {
-    public static class BIMOS
+    public static class BIMOSUtils
     {
         /// <summary>
         /// The local player's rig.

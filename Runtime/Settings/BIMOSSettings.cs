@@ -21,7 +21,7 @@ namespace KadenZombie8.BIMOS.Settings
         public Setting<float> GamepadSensitivity = new("Gamepad_Sensitivity", 5f);
 
         // Video
-        public Setting<float> FlatscreenFieldOfView = new("Video_FieldOfView", 90f);
+        public Setting<float> FlatscreenFieldOfView = new("Video_FieldOfView", 60f);
 
         // Spectator
         public Setting<int> SpectatorOutput = new("Spectator_Output", 0);

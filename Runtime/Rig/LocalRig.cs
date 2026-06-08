@@ -11,7 +11,7 @@ namespace KadenZombie8.BIMOS.Rig
         private void Awake()
         {
             var rig = GetComponent<BIMOSRig>();
-            BIMOS.TrySetLocalRig(rig);
+            BIMOSUtils.TrySetLocalRig(rig);
         }
     }
 }
