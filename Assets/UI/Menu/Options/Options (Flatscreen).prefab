@@ -4115,34 +4115,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1492683425683672756, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8796676209167307440}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
 --- !u!224 &1551300988080333781 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9130264075539943230, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
   m_PrefabInstance: {fileID: 7724344934881045739}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &9188875272853725791 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1492683425683672756, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
-  m_PrefabInstance: {fileID: 7724344934881045739}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8796676209167307440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9188875272853725791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d95a0d7723953514f815b9e25a2881df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.Video_FieldOfView
-  _camera: {fileID: 0}
 --- !u!1001 &7932298968300588479
 PrefabInstance:
   m_ObjectHideFlags: 0

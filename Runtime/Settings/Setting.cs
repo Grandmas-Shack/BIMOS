@@ -4,7 +4,7 @@ namespace KadenZombie8.BIMOS.Settings
 {
     public class Setting<T> : ISetting
     {
-        public event Action OnValueChanged;
+        public event Action<T> OnValueChanged;
 
         public string Key { get; private set; }
 
@@ -17,7 +17,7 @@ namespace KadenZombie8.BIMOS.Settings
             set
             {
                 _value = value;
-                OnValueChanged?.Invoke();
+                OnValueChanged?.Invoke(value);
             }
         }
 

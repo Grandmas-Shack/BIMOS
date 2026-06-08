@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
 using KadenZombie8.BIMOS.Settings;
-using KadenZombie8.BIMOS.UI.Options;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,9 +23,6 @@ namespace KadenZombie8.BIMOS.UI
         [SerializeField]
         private Toggle _initialFlatscreenToggle;
 
-        [SerializeField]
-        private int _defaultValue = 0;
-
         private void Awake()
         {
             BIMOSSettings.TryGetSetting("Debug_ControlType", out var setting);
@@ -44,9 +39,9 @@ namespace KadenZombie8.BIMOS.UI
 
         private void OnDisable() => _setting.OnValueChanged -= OnValueChanged;
 
-        private void OnValueChanged()
+        private void OnValueChanged(int value)
         {
-            bool isFlatscreen = _setting.Value == 1;
+            bool isFlatscreen = value == 1;
             UpdateTabs(isFlatscreen);
         }
 
