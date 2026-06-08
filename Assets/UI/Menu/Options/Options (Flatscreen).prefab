@@ -775,28 +775,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 981278695305983054, guid: 80dcc87033572db4a9eefd4ffcf615e0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8831113652143067061}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80dcc87033572db4a9eefd4ffcf615e0, type: 3}
---- !u!1 &105595668169428257 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 981278695305983054, guid: 80dcc87033572db4a9eefd4ffcf615e0, type: 3}
-  m_PrefabInstance: {fileID: 930298391765727599}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8831113652143067061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105595668169428257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b234f339bca1ea94783a68ca257512a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.UI.Options.Flatscreen
 --- !u!224 &7743099347006622891 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7465867165413127620, guid: 80dcc87033572db4a9eefd4ffcf615e0, type: 3}
@@ -3449,7 +3429,6 @@ MonoBehaviour:
     - {fileID: 828421160620912947}
   _initialSpectatorToggle: {fileID: 8304686887324774073}
   _initialFlatscreenToggle: {fileID: 8479111900405143981}
-  _defaultValue: 0
 --- !u!1 &4774497549795847977 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1763097296242076930, guid: 9798ed2afc48add47b53f81a3fcf35e0, type: 3}

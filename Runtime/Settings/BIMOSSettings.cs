@@ -4,7 +4,7 @@ namespace KadenZombie8.BIMOS.Settings
 {
     public class BIMOSSettings
     {
-        private static readonly Dictionary<string, ISetting> _settings = new();
+        private readonly Dictionary<string, ISetting> _settings = new();
 
         #region Settings
         /// <summary>
@@ -42,6 +42,6 @@ namespace KadenZombie8.BIMOS.Settings
             }
         }
 
-        public static bool TryGetSetting(string key, out ISetting setting) => _settings.TryGetValue(key, out setting);
+        public bool TryGetSetting(string key, out ISetting setting) => _settings.TryGetValue(key, out setting);
     }
 }

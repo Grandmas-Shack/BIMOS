@@ -1,3 +1,4 @@
+using KadenZombie8.BIMOS.Rig;
 using UnityEngine;
 
 namespace KadenZombie8.BIMOS.Settings
@@ -11,7 +12,7 @@ namespace KadenZombie8.BIMOS.Settings
 
         private void Awake()
         {
-            BIMOSSettings.TryGetSetting(_key, out var setting);
+            BIMOSUtils.Settings.TryGetSetting(_key, out var setting);
             _setting = (Setting<T>)setting;
             SettingUpdated(_setting.Value);
         }

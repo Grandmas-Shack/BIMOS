@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using KadenZombie8.BIMOS.Rig;
 using KadenZombie8.BIMOS.Settings;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,7 +26,7 @@ namespace KadenZombie8.BIMOS.UI
 
         private void Awake()
         {
-            BIMOSSettings.TryGetSetting("Debug_ControlType", out var setting);
+            BIMOSUtils.Settings.TryGetSetting("Debug_ControlType", out var setting);
             _setting = (Setting<int>)setting;
             bool isFlatscreen = _setting.Value == 1;
             UpdateTabs(isFlatscreen);

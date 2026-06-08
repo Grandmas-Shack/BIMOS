@@ -12,7 +12,7 @@ namespace KadenZombie8.BIMOS.Rig
         /// <summary>
         /// The local player's rig settings.
         /// </summary>
-        public static BIMOSSettings Settings { get; private set; } = new();
+        public static BIMOSSettings Settings { get; private set; }
 
         /// <summary>
         /// Tries to set the rig as the local player's rig.
@@ -21,6 +21,7 @@ namespace KadenZombie8.BIMOS.Rig
         public static bool TrySetLocalRig(BIMOSRig rig)
         {
             if (LocalRig != null && LocalRig != rig) return false;
+            Settings = new();
             LocalRig = rig;
             return true;
         }

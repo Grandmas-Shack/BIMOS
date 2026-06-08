@@ -1,4 +1,5 @@
 using System;
+using KadenZombie8.BIMOS.Rig;
 using KadenZombie8.BIMOS.Settings;
 using UnityEngine;
 
@@ -21,7 +22,7 @@ namespace KadenZombie8.BIMOS.UI.Options
 
         protected virtual void Awake()
         {
-            BIMOSSettings.TryGetSetting(Key, out var setting);
+            BIMOSUtils.Settings.TryGetSetting(Key, out var setting);
             _setting = (Setting<T>)setting;
             _applyOptions = GetComponentInParent<ApplyOptions>();
             UpdateOptionValue();
