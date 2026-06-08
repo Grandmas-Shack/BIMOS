@@ -17,7 +17,7 @@ namespace KadenZombie8.BIMOS.UI
         private Tabs _flatscreenTabs;
 
         [SerializeField]
-        private Option<int> _option;
+        private Setting<int> _setting;
 
         [SerializeField]
         private Toggle _initialSpectatorToggle;
@@ -26,14 +26,13 @@ namespace KadenZombie8.BIMOS.UI
         private Toggle _initialFlatscreenToggle;
 
         [SerializeField]
-        private string _key = "BIMOS_ControlType";
-
-        [SerializeField]
         private int _defaultValue = 0;
 
         private void Awake()
         {
-            bool isFlatscreen = BIMOSPrefs.GetInt(_key, _defaultValue) == 1;
+            BIMOSSettings.TryGetSetting("Debug_ControlType", out var setting);
+            _setting = (Setting<int>)setting;
+            bool isFlatscreen = _setting.Value == 1;
             UpdateTabs(isFlatscreen);
             if (isFlatscreen)
                 _initialFlatscreenToggle.Select();
@@ -41,13 +40,13 @@ namespace KadenZombie8.BIMOS.UI
                 _initialSpectatorToggle.Select();
         }
 
-        private void OnEnable() => _option.OnValueChanged += OnValueChanged;
+        private void OnEnable() => _setting.OnValueChanged += OnValueChanged;
 
-        private void OnDisable() => _option.OnValueChanged -= OnValueChanged;
+        private void OnDisable() => _setting.OnValueChanged -= OnValueChanged;
 
         private void OnValueChanged()
         {
-            bool isFlatscreen = _option.CurrentValue == 1;
+            bool isFlatscreen = _setting.Value == 1;
             UpdateTabs(isFlatscreen);
         }
 

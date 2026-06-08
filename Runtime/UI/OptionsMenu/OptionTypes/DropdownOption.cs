@@ -1,4 +1,3 @@
-using KadenZombie8.BIMOS.Settings;
 using TMPro;
 
 namespace KadenZombie8.BIMOS.UI.Options
@@ -17,10 +16,6 @@ namespace KadenZombie8.BIMOS.UI.Options
 
         private void OnDisable() => _dropdown.onValueChanged.RemoveListener(Changed);
 
-        protected override void ApplyValue(int value) => _dropdown.value = value;
-
-        protected override void Save(int value) => BIMOSPrefs.SetInt(Key, value);
-
-        protected override int Load() => BIMOSPrefs.GetInt(Key, DefaultValue);
+        protected override void SetOptionValue(int value) => _dropdown.value = value;
     }
 }

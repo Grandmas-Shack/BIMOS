@@ -1,4 +1,3 @@
-using KadenZombie8.BIMOS.Settings;
 using UnityEngine.UI;
 
 namespace KadenZombie8.BIMOS.UI.Options
@@ -17,10 +16,6 @@ namespace KadenZombie8.BIMOS.UI.Options
 
         private void OnDisable() => _slider.onValueChanged.RemoveListener(Changed);
 
-        protected override void ApplyValue(float value) => _slider.value = value;
-
-        protected override void Save(float value) => BIMOSPrefs.SetFloat(Key, value);
-
-        protected override float Load() => BIMOSPrefs.GetFloat(Key, DefaultValue);
+        protected override void SetOptionValue(float value) => _slider.value = value;
     }
 }

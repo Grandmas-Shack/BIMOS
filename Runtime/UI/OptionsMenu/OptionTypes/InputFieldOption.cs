@@ -1,4 +1,3 @@
-using KadenZombie8.BIMOS.Settings;
 using TMPro;
 
 namespace KadenZombie8.BIMOS.UI.Options
@@ -17,10 +16,6 @@ namespace KadenZombie8.BIMOS.UI.Options
 
         private void OnDisable() => _inputField.onValueChanged.RemoveListener(Changed);
 
-        protected override void ApplyValue(string value) => _inputField.text = value;
-
-        protected override void Save(string value) => BIMOSPrefs.SetString(Key, value);
-
-        protected override string Load() => BIMOSPrefs.GetString(Key, DefaultValue);
+        protected override void SetOptionValue(string value) => _inputField.text = value;
     }
 }

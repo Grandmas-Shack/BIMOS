@@ -1,3 +1,5 @@
+using KadenZombie8.BIMOS.Settings;
+
 namespace KadenZombie8.BIMOS.Rig
 {
     public static class BIMOS
@@ -6,6 +8,11 @@ namespace KadenZombie8.BIMOS.Rig
         /// The local player's rig.
         /// </summary>
         public static BIMOSRig LocalRig { get; private set; }
+
+        /// <summary>
+        /// The local player's rig settings.
+        /// </summary>
+        public static BIMOSSettings Settings { get; private set; } = new();
 
         /// <summary>
         /// Tries to set the rig as the local player's rig.

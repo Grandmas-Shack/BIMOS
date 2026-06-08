@@ -588,7 +588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9151750415994078175, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
       propertyPath: Key
-      value: BIMOS_Gamepad_Sensitivity
+      value: Gamepad_Sensitivity
       objectReference: {fileID: 0}
     - target: {fileID: 9151750415994078175, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
       propertyPath: DefaultValue
@@ -766,7 +766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7518216950671804572, guid: 80dcc87033572db4a9eefd4ffcf615e0, type: 3}
       propertyPath: Key
-      value: BIMOS_ControlType
+      value: Debug_ControlType
       objectReference: {fileID: 0}
     - target: {fileID: 8439043642225447837, guid: 80dcc87033572db4a9eefd4ffcf615e0, type: 3}
       propertyPath: m_SizeDelta.x
@@ -797,17 +797,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b234f339bca1ea94783a68ca257512a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.UI.Options.Flatscreen
---- !u!114 &7259528883627438579 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7518216950671804572, guid: 80dcc87033572db4a9eefd4ffcf615e0, type: 3}
-  m_PrefabInstance: {fileID: 930298391765727599}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105595668169428257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c21991f010bca8c48a8a8ce2c65023cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.UI.Options.DropdownOption
 --- !u!224 &7743099347006622891 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7465867165413127620, guid: 80dcc87033572db4a9eefd4ffcf615e0, type: 3}
@@ -1095,7 +1084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7518216950671804572, guid: 80dcc87033572db4a9eefd4ffcf615e0, type: 3}
       propertyPath: Key
-      value: BIMOS_Mouse_GripType
+      value: Mouse_GripType
       objectReference: {fileID: 0}
     - target: {fileID: 8439043642225447837, guid: 80dcc87033572db4a9eefd4ffcf615e0, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1293,7 +1282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9151750415994078175, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
       propertyPath: Key
-      value: BIMOS_Spectator_Smoothing
+      value: Spectator_Smoothing
       objectReference: {fileID: 0}
     - target: {fileID: 9151750415994078175, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
       propertyPath: DefaultValue
@@ -1344,6 +1333,10 @@ PrefabInstance:
     - target: {fileID: 970844775329907739, guid: 71353b9b960f1a94f9b05fdbe73a9c74, type: 3}
       propertyPath: m_Name
       value: ControllerRig
+      objectReference: {fileID: 0}
+    - target: {fileID: 970844775329907739, guid: 71353b9b960f1a94f9b05fdbe73a9c74, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3489168210754332810, guid: 71353b9b960f1a94f9b05fdbe73a9c74, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1455,7 +1448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8260201749432925330, guid: 71353b9b960f1a94f9b05fdbe73a9c74, type: 3}
       propertyPath: Key
-      value: BIMOS_ControllerRigVisibility
+      value: ControllerRigVisibility
       objectReference: {fileID: 0}
     - target: {fileID: 8501266198457459656, guid: 71353b9b960f1a94f9b05fdbe73a9c74, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1796,7 +1789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9151750415994078175, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
       propertyPath: Key
-      value: BIMOS_Spectator_FieldOfView
+      value: Spectator_FieldOfView
       objectReference: {fileID: 0}
     - target: {fileID: 9151750415994078175, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
       propertyPath: DefaultValue
@@ -1847,6 +1840,10 @@ PrefabInstance:
     - target: {fileID: 970844775329907739, guid: 71353b9b960f1a94f9b05fdbe73a9c74, type: 3}
       propertyPath: m_Name
       value: AnimationRig
+      objectReference: {fileID: 0}
+    - target: {fileID: 970844775329907739, guid: 71353b9b960f1a94f9b05fdbe73a9c74, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3489168210754332810, guid: 71353b9b960f1a94f9b05fdbe73a9c74, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1958,7 +1955,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8260201749432925330, guid: 71353b9b960f1a94f9b05fdbe73a9c74, type: 3}
       propertyPath: Key
-      value: BIMOS_AnimationRigVisibility
+      value: AnimationRigVisibility
       objectReference: {fileID: 0}
     - target: {fileID: 8260201749432925330, guid: 71353b9b960f1a94f9b05fdbe73a9c74, type: 3}
       propertyPath: DefaultValue
@@ -2144,7 +2141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7518216950671804572, guid: 80dcc87033572db4a9eefd4ffcf615e0, type: 3}
       propertyPath: Key
-      value: BIMOS_Spectator_Eye
+      value: Spectator_Eye
       objectReference: {fileID: 0}
     - target: {fileID: 8439043642225447837, guid: 80dcc87033572db4a9eefd4ffcf615e0, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2326,7 +2323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9151750415994078175, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
       propertyPath: Key
-      value: BIMOS_Mouse_Sensitivity
+      value: Mouse_Sensitivity
       objectReference: {fileID: 0}
     - target: {fileID: 9151750415994078175, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
       propertyPath: DefaultValue
@@ -2795,6 +2792,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PhysicsRig
       objectReference: {fileID: 0}
+    - target: {fileID: 970844775329907739, guid: 71353b9b960f1a94f9b05fdbe73a9c74, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3489168210754332810, guid: 71353b9b960f1a94f9b05fdbe73a9c74, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -2905,7 +2906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8260201749432925330, guid: 71353b9b960f1a94f9b05fdbe73a9c74, type: 3}
       propertyPath: Key
-      value: BIMOS_PhysicsRigVisibility
+      value: PhysicsRigVisibility
       objectReference: {fileID: 0}
     - target: {fileID: 8501266198457459656, guid: 71353b9b960f1a94f9b05fdbe73a9c74, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3446,7 +3447,6 @@ MonoBehaviour:
     - {fileID: 8943788200463695513}
     Disable:
     - {fileID: 828421160620912947}
-  _option: {fileID: 7259528883627438579}
   _initialSpectatorToggle: {fileID: 8304686887324774073}
   _initialFlatscreenToggle: {fileID: 8479111900405143981}
   _key: BIMOS_ControlType
@@ -3779,7 +3779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7518216950671804572, guid: 80dcc87033572db4a9eefd4ffcf615e0, type: 3}
       propertyPath: Key
-      value: BIMOS_Spectator_CameraVisual
+      value: Spectator_CameraVisual
       objectReference: {fileID: 0}
     - target: {fileID: 8439043642225447837, guid: 80dcc87033572db4a9eefd4ffcf615e0, type: 3}
       propertyPath: m_SizeDelta.x
@@ -4107,7 +4107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9151750415994078175, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
       propertyPath: Key
-      value: BIMOS_Flatscreen_FieldOfView
+      value: Video_FieldOfView
       objectReference: {fileID: 0}
     - target: {fileID: 9151750415994078175, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
       propertyPath: DefaultValue
@@ -4297,7 +4297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7518216950671804572, guid: 80dcc87033572db4a9eefd4ffcf615e0, type: 3}
       propertyPath: Key
-      value: BIMOS_Spectator_Output
+      value: Spectator_Output
       objectReference: {fileID: 0}
     - target: {fileID: 7518216950671804572, guid: 80dcc87033572db4a9eefd4ffcf615e0, type: 3}
       propertyPath: DefaultValue

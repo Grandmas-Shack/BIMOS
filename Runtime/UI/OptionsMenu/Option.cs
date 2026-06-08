@@ -1,41 +1,38 @@
 using System;
+using KadenZombie8.BIMOS.Settings;
 using UnityEngine;
 
 namespace KadenZombie8.BIMOS.UI.Options
 {
     public abstract class Option<T> : MonoBehaviour, IAppliable, IRevertible
     {
+        private Setting<T> _setting;
+
         public event Action OnValueChanged;
 
         [SerializeField]
         protected string Key;
-
-        [SerializeField]
-        protected T DefaultValue;
-
-        public bool IsDefaultValue => CurrentValue.Equals(DefaultValue);
-
-        public T CurrentValue { get; private set; }
-        private T _savedValue;
         
         private ApplyOptions _applyOptions;
 
-        public bool IsSavedValue => CurrentValue.Equals(_savedValue);
+        public bool IsSavedValue => _setting.IsSavedValue;
+
+        public bool IsDefaultValue => _setting.IsDefaultValue;
 
         protected virtual void Awake()
         {
-            _savedValue = Load();
-            CurrentValue = _savedValue;
+            BIMOSSettings.TryGetSetting(Key, out var setting);
+            _setting = (Setting<T>)setting;
             _applyOptions = GetComponentInParent<ApplyOptions>();
-            ApplyValue(CurrentValue);
+            UpdateOptionValue();
         }
 
         protected virtual void Changed(T value)
         {
-            CurrentValue = value;
+            _setting.Value = value;
             OnValueChanged?.Invoke();
 
-            if (IsSavedValue)
+            if (_setting.IsSavedValue)
                 _applyOptions.UnregisterOption(this);
             else
                 _applyOptions.RegisterOption(this);
@@ -43,27 +40,28 @@ namespace KadenZombie8.BIMOS.UI.Options
 
         public void Apply()
         {
-            Save(CurrentValue);
-            _savedValue = CurrentValue;
-            Changed(CurrentValue);
+            _setting.Save();
+            Changed(_setting.Value);
         }
 
         public void Discard()
         {
-            CurrentValue = _savedValue;
-            ApplyValue(CurrentValue);
-            Changed(CurrentValue);
+            _setting.Discard();
+            UpdateOptionValue();
         }
 
         public void Revert()
         {
-            CurrentValue = DefaultValue;
-            ApplyValue(CurrentValue);
-            Changed(CurrentValue);
+            _setting.Revert();
+            UpdateOptionValue();
         }
 
-        protected abstract void ApplyValue(T value);
-        protected abstract void Save(T value);
-        protected abstract T Load();
+        private void UpdateOptionValue()
+        {
+            SetOptionValue(_setting.Value);
+            Changed(_setting.Value);
+        }
+
+        protected abstract void SetOptionValue(T value);
     }
 }
