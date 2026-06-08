@@ -13,13 +13,13 @@ namespace KadenZombie8.BIMOS.UI
 
         public void Register(Tab tab, Toggle toggle)
         {
-            void listener(bool isSelected)
+            void Listener(bool isSelected)
             {
                 if (isSelected) SetActiveTab(tab);
             }
 
-            _listeners[toggle] = listener;
-            toggle.onValueChanged.AddListener(listener);
+            _listeners[toggle] = Listener;
+            toggle.onValueChanged.AddListener(Listener);
         }
 
         public void Unregister(Toggle toggle)

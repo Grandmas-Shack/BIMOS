@@ -36,9 +36,9 @@ namespace KadenZombie8.BIMOS.UI
             bool isFlatscreen = BIMOSPrefs.GetInt(_key, _defaultValue) == 1;
             UpdateTabs(isFlatscreen);
             if (isFlatscreen)
-                _initialFlatscreenToggle.isOn = true;
+                _initialFlatscreenToggle.Select();
             else
-                _initialSpectatorToggle.isOn = true;
+                _initialSpectatorToggle.Select();
         }
 
         private void OnEnable() => _option.OnValueChanged += OnValueChanged;
