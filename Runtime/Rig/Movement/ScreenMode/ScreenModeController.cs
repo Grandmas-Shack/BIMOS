@@ -83,6 +83,8 @@ namespace KadenZombie8.BIMOS.Rig.Movement
             _scrollReference.action.Enable();
             _unlockRotationReference.action.Enable();
             _resetRotationReference.action.Enable();
+            _unlockDepthReference.action.Enable();
+            _unlockReference.action.Enable();
             _cycleReference.action.Enable();
         }
 
