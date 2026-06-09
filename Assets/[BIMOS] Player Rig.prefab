@@ -7670,8 +7670,10 @@ GameObject:
   - component: {fileID: 1353467984831324509}
   - component: {fileID: 6692395080721857440}
   - component: {fileID: 8251921314602066196}
+  - component: {fileID: 5392313364509101690}
+  - component: {fileID: 3889809590157721870}
   m_Layer: 0
-  m_Name: Settings
+  m_Name: Bindings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7719,6 +7721,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.UI.ControlType
   _key: Debug_ControlType
+--- !u!114 &5392313364509101690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5282995369280217170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d02196ac4b37de49abb42fe03c3f003, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.Settings.Bindings.Mouse_Sensitivity
+  _key: Mouse_Sensitivity
+  _camera: {fileID: 1785471339049578779}
+--- !u!114 &3889809590157721870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5282995369280217170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9520595105aa16849880a63feb808f95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.Settings.Bindings.Gamepad_Sensitivity
+  _key: Gamepad_Sensitivity
+  _camera: {fileID: 1785471339049578779}
 --- !u!1 &5297804927562428358
 GameObject:
   m_ObjectHideFlags: 0
@@ -12437,6 +12467,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14afe0965956c174a876cc95b44150a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseSensitivity: 5
+  GamepadSensitivity: 5
   _lookReference: {fileID: -1384019015999760364, guid: 0cd47f68cb724f8478ed745999f9d67a, type: 3}
   _leftHand: {fileID: 8894401630385708789}
   _rightHand: {fileID: 2741531472009422250}

@@ -1,7 +1,6 @@
-using KadenZombie8.BIMOS.Settings;
 using UnityEngine;
 
-namespace KadenZombie8.BIMOS.Rig
+namespace KadenZombie8.BIMOS.Settings.Bindings
 {
     public class Video_FieldOfView : SettingBinding<float>
     {

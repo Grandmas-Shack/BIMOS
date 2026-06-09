@@ -1,7 +1,7 @@
 using KadenZombie8.BIMOS.Rig;
 using UnityEngine;
 
-namespace KadenZombie8.BIMOS.Settings
+namespace KadenZombie8.BIMOS.Settings.Bindings
 {
     public abstract class SettingBinding<T> : MonoBehaviour
     {

@@ -491,8 +491,16 @@ PrefabInstance:
       value: Sensitivity
       objectReference: {fileID: 0}
     - target: {fileID: 5578494388410018162, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578494388410018162, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
       propertyPath: m_MaxValue
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578494388410018162, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
+      propertyPath: m_MinValue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5578494388410018162, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
       propertyPath: m_WholeNumbers
@@ -2206,8 +2214,16 @@ PrefabInstance:
       value: Sensitivity
       objectReference: {fileID: 0}
     - target: {fileID: 5578494388410018162, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578494388410018162, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
       propertyPath: m_MaxValue
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578494388410018162, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
+      propertyPath: m_MinValue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5578494388410018162, guid: 520d9120ce63a1a44a7bb428f17e1f96, type: 3}
       propertyPath: m_WholeNumbers

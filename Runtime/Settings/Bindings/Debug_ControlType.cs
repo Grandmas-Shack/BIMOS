@@ -1,4 +1,4 @@
-namespace KadenZombie8.BIMOS.Settings
+namespace KadenZombie8.BIMOS.Settings.Bindings
 {
     public class Debug_ControlType : SettingBinding<int>
     {
