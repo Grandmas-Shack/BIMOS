@@ -5,6 +5,7 @@ namespace KadenZombie8.BIMOS.Settings
     public class Setting<T> : ISetting
     {
         public event Action<T> OnValueChanged;
+        public event Action<T> OnValueSaved;
 
         public string Key { get; private set; }
 
@@ -50,6 +51,7 @@ namespace KadenZombie8.BIMOS.Settings
                 BIMOSPrefs.SetString(Key, Convert.ToString(Value));
 
             _savedValue = Value;
+            OnValueSaved?.Invoke(Value);
         }
 
         public T Load()

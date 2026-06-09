@@ -8,19 +8,29 @@ namespace KadenZombie8.BIMOS.Settings.Bindings
         [SerializeField]
         private string _key;
 
-        private Setting<T> _setting;
+        protected Setting<T> Setting;
 
         private void Awake()
         {
             BIMOSUtils.Settings.TryGetSetting(_key, out var setting);
-            _setting = (Setting<T>)setting;
-            SettingUpdated(_setting.Value);
+            Setting = (Setting<T>)setting;
+            SettingUpdated(Setting.Value);
         }
 
-        private void OnEnable() => _setting.OnValueChanged += SettingUpdated;
+        private void OnEnable()
+        {
+            Setting.OnValueChanged += SettingUpdated;
+            Setting.OnValueSaved += SettingSaved;
+        }
 
-        private void OnDisable() => _setting.OnValueChanged -= SettingUpdated;
+        private void OnDisable()
+        {
+            Setting.OnValueChanged -= SettingUpdated;
+            Setting.OnValueSaved -= SettingSaved;
+        }
 
-        protected abstract void SettingUpdated(T value);
+        protected virtual void SettingUpdated(T value) { }
+
+        protected virtual void SettingSaved(T value) { }
     }
 }

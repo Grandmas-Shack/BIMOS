@@ -186,6 +186,15 @@ namespace KadenZombie8.BIMOS.Editor
                 CheckPredicate = () => HasLayer("BIMOSMenu"),
                 FixIt = () => CreateLayer("BIMOSMenu"),
                 Error = true
+            },
+            new()
+            {
+                IsRuleEnabled = () => true,
+                Message = "Initialize XR on startup must be disabled",
+                Category = _category,
+                CheckPredicate = () => !XRGeneralSettings.Instance.InitManagerOnStart,
+                FixIt = () => XRGeneralSettings.Instance.InitManagerOnStart = false,
+                Error = true
             }
         };
 
