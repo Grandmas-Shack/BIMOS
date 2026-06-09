@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
 
 #if UNITY_WEBGL
 using WebXR;
@@ -36,6 +37,13 @@ namespace KadenZombie8.BIMOS.Rig
             SecondaryTouchedAction,
             SecondaryButtonAction,
             ThumbstickTouchedAction;
+
+        public bool MouseToggleGrip;
+        public bool GamepadToggleGrip;
+        public bool VRToggleGrip;
+
+        private bool _wasGripped;
+        private bool _isGripped;
 
         private void OnEnable()
         {
@@ -201,7 +209,32 @@ namespace KadenZombie8.BIMOS.Rig
 
         private void OnGrip()
         {
-            Grip = GripAction.action.ReadValue<float>();
+            var action = GripAction.action;
+            var value = action.ReadValue<float>();
+            var device = action.activeControl?.device;
+            var isGripped = value > 0.5f;
+
+            if (device is Mouse && MouseToggleGrip ||
+                device is Gamepad && GamepadToggleGrip ||
+                device is XRController && VRToggleGrip)
+            {
+                if (isGripped && !_wasGripped)
+                    _isGripped = !_isGripped;
+
+                if (device is not Mouse)
+                    Grip = _isGripped ? 1f : Mathf.Min(1f, value * 2f);
+                else
+                    Grip = _isGripped ? 1f : 0f;
+            }
+            else
+            {
+                Grip = value;
+            }
+
+            if (device is Mouse || device is Gamepad)
+                TriggerTouched = true;
+
+            _wasGripped = isGripped;
         }
 
         private void OnThumbrestTouched(InputAction.CallbackContext callbackContext)

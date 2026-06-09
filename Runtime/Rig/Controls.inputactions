@@ -503,17 +503,6 @@
                 },
                 {
                     "name": "",
-                    "id": "4dcbbfa6-d8cd-4fa5-8deb-ac1917af8447",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TriggerTouched",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "2d65326a-8175-4ab5-aef8-838400107d88",
                     "path": "<XRController>{LeftHand}/thumbrestTouched",
                     "interactions": "",
@@ -845,17 +834,6 @@
                     "name": "",
                     "id": "8e0705cf-4050-4753-9ff5-6e1810d5967b",
                     "path": "<XRController>{RightHand}/triggerTouched",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TriggerTouched",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "dd73ff42-312e-491b-916d-14f0d828572b",
-                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
