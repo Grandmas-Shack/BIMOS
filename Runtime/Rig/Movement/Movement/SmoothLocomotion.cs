@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
+using static KadenZombie8.BIMOS.Rig.Movement.VirtualCrouching;
 
 namespace KadenZombie8.BIMOS.Rig.Movement
 {
@@ -17,7 +19,7 @@ namespace KadenZombie8.BIMOS.Rig.Movement
             Toggle,
             Hold
         }
-        public RunModeType RunMode = RunModeType.Toggle;
+        private RunModeType _runMode;
 
         [SerializeField]
         private InputActionReference _moveAction;
@@ -65,8 +67,8 @@ namespace KadenZombie8.BIMOS.Rig.Movement
             _moveAction.action.performed += OnMove;
             _moveAction.action.canceled += OnMove;
 
-            _runAction.action.performed += OnToggleRun;
-            _runAction.action.canceled += OnToggleRun;
+            _runAction.action.performed += OnRunPressed;
+            _runAction.action.canceled += OnRunPressed;
         }
 
         private void OnDisable()
@@ -74,14 +76,19 @@ namespace KadenZombie8.BIMOS.Rig.Movement
             _moveAction.action.performed -= OnMove;
             _moveAction.action.canceled -= OnMove;
 
-            _runAction.action.performed -= OnToggleRun;
-            _runAction.action.canceled -= OnToggleRun;
+            _runAction.action.performed -= OnRunPressed;
+            _runAction.action.canceled -= OnRunPressed;
         }
 
         private void OnMove(InputAction.CallbackContext context) => _moveDirection = context.ReadValue<Vector2>();
-        private void OnToggleRun(InputAction.CallbackContext context)
+        private void OnRunPressed(InputAction.CallbackContext context)
         {
-            if (RunMode == RunModeType.Toggle)
+            var device = context.action.activeControl.device;
+            var isKeyboard = device is Keyboard;
+
+            _runMode = isKeyboard ? RunModeType.Hold : RunModeType.Toggle;
+
+            if (_runMode == RunModeType.Toggle)
             {
                 if (context.performed)
                     IsRunning = !IsRunning;
@@ -100,9 +107,9 @@ namespace KadenZombie8.BIMOS.Rig.Movement
             var crouchingHeight = (_crouching.CrouchingLegHeight + _crouching.StandingLegHeight) / 2f;
             var isCrouching = cameraHeight < crouchingHeight;
 
-            if (RunMode == RunModeType.Hold) IsRunning = _isRunPressed;
+            if (_runMode == RunModeType.Hold) IsRunning = _isRunPressed;
 
-            if (RunMode == RunModeType.Toggle && _moveDirection.magnitude < 0.1f || isCrouching)
+            if (_runMode == RunModeType.Toggle && _moveDirection.magnitude < 0.1f || isCrouching)
                 IsRunning = false;
 
             var currentSpeed = WalkSpeed;
