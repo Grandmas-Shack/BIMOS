@@ -1402,22 +1402,8 @@ PrefabInstance:
       addedObject: {fileID: 9100990254829110427}
     - targetCorrespondingSourceObject: {fileID: 8753398139688055170, guid: ab8b49e6d95258e488025f81372ede70, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4719203237281048308}
-    - targetCorrespondingSourceObject: {fileID: 8753398139688055170, guid: ab8b49e6d95258e488025f81372ede70, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1877004542915977349}
+      addedObject: {fileID: 5451221948747212475}
   m_SourcePrefab: {fileID: 100100000, guid: ab8b49e6d95258e488025f81372ede70, type: 3}
---- !u!114 &1366084053932197338 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8356667327951559002, guid: ab8b49e6d95258e488025f81372ede70, type: 3}
-  m_PrefabInstance: {fileID: 6993411398694739072}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1763097296242076930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &1763097296242076930 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8753398139688055170, guid: ab8b49e6d95258e488025f81372ede70, type: 3}
@@ -1448,7 +1434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.UI.Options.ApplyButton
   _button: {fileID: 8641045224248189240}
---- !u!114 &4719203237281048308
+--- !u!114 &5451221948747212475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1457,84 +1443,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1763097296242076930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b78eb6c0c6d24ed478242c2dd7a584e3, type: 3}
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: kadenzombie8.bimos::KadenZombie8.BIMOS.UI.Options.DiscardPopup
-  _onHasUnsavedChanges:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7796502698357373233}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  _onNoUnsavedChanges:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1763097296242076930}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _applyOptions: {fileID: 0}
---- !u!114 &1877004542915977349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1763097296242076930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1366084053932197338}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
+  m_AspectMode: 2
+  m_AspectRatio: 1
 --- !u!224 &8732047998062190327 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1739482364372206199, guid: ab8b49e6d95258e488025f81372ede70, type: 3}
@@ -1874,10 +1787,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 5989658377077800635, guid: 4d95d45acfdc98b41ad222dbb3dc6217, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 4719203237281048308}
     - target: {fileID: 5989658377077800635, guid: 4d95d45acfdc98b41ad222dbb3dc6217, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2

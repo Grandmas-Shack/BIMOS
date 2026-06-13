@@ -3429,6 +3429,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5451221948747212475, guid: 9798ed2afc48add47b53f81a3fcf35e0, type: 3}
+      propertyPath: m_AspectRatio
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6781409064947485055, guid: 9798ed2afc48add47b53f81a3fcf35e0, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3581,9 +3585,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7395632845660269489}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1763097296242076930, guid: 9798ed2afc48add47b53f81a3fcf35e0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2707271386599056999}
     - targetCorrespondingSourceObject: {fileID: 4773834059634438515, guid: 9798ed2afc48add47b53f81a3fcf35e0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3586925389691835014}
@@ -3644,25 +3645,6 @@ MonoBehaviour:
     - {fileID: 828421160620912947}
   _initialSpectatorToggle: {fileID: 8304686887324774073}
   _initialFlatscreenToggle: {fileID: 8479111900405143981}
---- !u!1 &4774497549795847977 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1763097296242076930, guid: 9798ed2afc48add47b53f81a3fcf35e0, type: 3}
-  m_PrefabInstance: {fileID: 6500290340501062187}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2707271386599056999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4774497549795847977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
-  m_AspectMode: 2
-  m_AspectRatio: 1.5
 --- !u!224 &5621898112371503587 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1455037698555229128, guid: 9798ed2afc48add47b53f81a3fcf35e0, type: 3}
