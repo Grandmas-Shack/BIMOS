@@ -21,7 +21,7 @@ namespace KadenZombie8.BIMOS.Rig.Movement
 
         public float CrouchInputMagnitude { get; set; }
 
-        public bool IsCrouchChanging => Mathf.Abs(CrouchInputMagnitude) >= 0.75f;
+        public bool IsCrouchChanging => CrouchInputMagnitude != 0f;
 
         public enum VirtualCrouchModeType
         {
@@ -69,13 +69,11 @@ namespace KadenZombie8.BIMOS.Rig.Movement
             else if (device is Gamepad)
                 _virtualCrouchMode = VirtualCrouchModeType.DiscreteToggle;
 
+            CrouchInputMagnitude = context.ReadValue<float>();
+
             switch (_virtualCrouchMode)
             {
-                case VirtualCrouchModeType.Continuous:
-                    CrouchInputMagnitude = context.ReadValue<Vector2>().y;
-                    break;
                 case VirtualCrouchModeType.Discrete:
-                    CrouchInputMagnitude = context.ReadValue<Vector2>().y;
                     CrouchInputMagnitude = CrouchInputMagnitude < 0f ? -1f : 1f;
                     break;
                 case VirtualCrouchModeType.DiscreteToggle when context.performed:

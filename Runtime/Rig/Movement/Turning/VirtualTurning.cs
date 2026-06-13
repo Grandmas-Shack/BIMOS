@@ -9,7 +9,7 @@ namespace KadenZombie8.BIMOS.Rig.Movement
     /// </summary>
     public class VirtualTurning : MonoBehaviour
     {
-        public event Action<Vector2> TurnEvent;
+        public event Action<float> TurnEvent;
         
         [Tooltip("The speed (in degrees/second) turning occurs at")]
         public float TurnSpeed = 450f;
@@ -71,6 +71,6 @@ namespace KadenZombie8.BIMOS.Rig.Movement
             _turnAction.action.canceled -= OnTurn;
         }
 
-        private void OnTurn(InputAction.CallbackContext context) => TurnEvent?.Invoke(context.ReadValue<Vector2>());
+        private void OnTurn(InputAction.CallbackContext context) => TurnEvent?.Invoke(context.ReadValue<float>());
     }
 }
