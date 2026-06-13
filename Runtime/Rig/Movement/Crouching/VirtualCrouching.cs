@@ -120,7 +120,7 @@ namespace KadenZombie8.BIMOS.Rig.Movement
             else
             {
                 var neckYDifference = _controllerRig.Transforms.Camera.position.y - _controllerRig.Transforms.HeadCameraOffset.position.y;
-                minLegHeight = _crouching.CrawlingLegHeight - neckYDifference;
+                minLegHeight = _crouching.CrouchingLegHeight - neckYDifference;
                 maxLegHeight = _crouching.StandingLegHeight - neckYDifference - _controllerRig.Transforms.HeadCameraOffset.localPosition.y;
             }
 
