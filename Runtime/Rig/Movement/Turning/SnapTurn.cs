@@ -6,6 +6,7 @@ namespace KadenZombie8.BIMOS.Rig.Movement
     /// <summary>
     /// Turn type with stepped rotation
     /// </summary>
+    [RequireComponent(typeof(VirtualTurning))]
     public class SnapTurn : MonoBehaviour
     {
         [Tooltip("The angle (in degrees) the player turns when they move the turn stick horizontally")]

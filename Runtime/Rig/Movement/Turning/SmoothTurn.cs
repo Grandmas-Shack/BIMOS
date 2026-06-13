@@ -5,10 +5,11 @@ namespace KadenZombie8.BIMOS.Rig.Movement
     /// <summary>
     /// Turn type with continuous rotation
     /// </summary>
+    [RequireComponent(typeof(VirtualTurning))]
     public class SmoothTurn : MonoBehaviour
     {
         private VirtualTurning _virtualTurning;
-        private PhysicsRig _physicsRig;
+        private ControllerRig _controllerRig;
         private float _turnVector;
 
         private void OnEnable() => _virtualTurning.TurnEvent += OnTurn;
@@ -17,17 +18,17 @@ namespace KadenZombie8.BIMOS.Rig.Movement
 
         private void Awake()
         {
-            _physicsRig = GetComponent<PhysicsRig>();
             _virtualTurning = GetComponent<VirtualTurning>();
+            _controllerRig = _virtualTurning.ControllerRig;
         }
 
         private void OnTurn(float direction) => _turnVector = direction;
 
         private void Update()
         {
-            var turnDirection = _turnVector / Mathf.Abs(_turnVector);
+            if (_turnVector == 0f) return;
             var degreesToTurn = _virtualTurning.TurnSpeed * Time.deltaTime;
-            _physicsRig.Rigidbodies.Pelvis.transform.Rotate(0f, degreesToTurn * turnDirection, 0f);
+            _controllerRig.transform.Rotate(0f, degreesToTurn * _turnVector, 0f);
         }
     }
 }
