@@ -16,29 +16,26 @@ namespace KadenZombie8.BIMOS.Settings.Bindings
             if (value == 0)
                 StartCoroutine(StartXR());
             else
-                StartCoroutine(StopXR());
+                StopXR();
         }
 
         private IEnumerator StartXR()
         {
             var manager = XRGeneralSettings.Instance.Manager;
-            if (!manager) yield break;
             if (manager.activeLoader) yield break;
-            if (manager.isInitializationComplete) yield break;
-            manager.InitializeLoaderSync();
-            while (!manager.isInitializationComplete) yield return null;
+            yield return manager.InitializeLoader();
+            if (!manager.activeLoader) yield break;
             manager.StartSubsystems();
         }
 
-        private IEnumerator StopXR()
+        private void StopXR()
         {
             var manager = XRGeneralSettings.Instance.Manager;
-            if (!manager) yield break;
-            if (!manager.activeLoader) yield break;
-            if (!manager.isInitializationComplete) yield break;
+            if (!manager.activeLoader) return;
             manager.StopSubsystems();
             manager.DeinitializeLoader();
-            yield return null;
         }
+
+        private void OnDestroy() => StopXR();
     }
 }
