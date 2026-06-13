@@ -33,7 +33,6 @@ namespace KadenZombie8.BIMOS.Rig.Movement
 
         private Crouching _crouching;
         private Jumping _jumping;
-        private bool _wasCrouchChanging;
         private IState<JumpStateMachine> _standState;
         private IState<JumpStateMachine> _compressState;
         private IState<JumpStateMachine> _pushState;
@@ -130,14 +129,16 @@ namespace KadenZombie8.BIMOS.Rig.Movement
                 minLegHeight -= _jumping.AnticipationHeight;
                 maxLegHeight -= _jumping.AnticipationHeight;
             }
-            else if (!IsCrouchChanging && _wasCrouchChanging)
+            else
             {
-                minLegHeight = _crouching.CrouchingLegHeight;
-                maxLegHeight = _crouching.StandingLegHeight;
+                if (CrouchInputMagnitude >= 0f && _jumping.LocomotionSphere.IsGrounded)
+                    minLegHeight = _crouching.CrouchingLegHeight;
+
+                if (CrouchInputMagnitude <= 0f)
+                    maxLegHeight = _crouching.StandingLegHeight;
             }
 
             _crouching.TargetLegHeight = Mathf.Clamp(_crouching.TargetLegHeight, minLegHeight, maxLegHeight);
-            _wasCrouchChanging = IsCrouchChanging;
         }
     }
 }

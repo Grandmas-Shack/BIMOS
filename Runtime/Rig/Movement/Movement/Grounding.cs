@@ -27,6 +27,8 @@ namespace KadenZombie8.BIMOS
 
         public bool IsGrounded { get; private set; }
 
+        private bool _isGrounded;
+
         public Vector3 GroundNormal { get; private set; }
 
         public bool IsSlipping { get; private set; }
@@ -41,13 +43,14 @@ namespace KadenZombie8.BIMOS
         {
             if (!enabled) return;
 
-            IsGrounded = false;
+            IsGrounded = _isGrounded;
+            _isGrounded = false;
             IsSlipping = false;
         }
 
         private void OnCollisionStay(Collision collision)
         {
-            if (!enabled || IsGrounded) return;
+            if (!enabled || _isGrounded) return;
 
             IsSlipping = collision.collider.material.staticFriction < _minFriction;
             if (IsSlipping) return;
@@ -67,7 +70,7 @@ namespace KadenZombie8.BIMOS
                 IsSlipping = slopeDot < _minSlopeDot;
                 if (IsSlipping) continue;
 
-                IsGrounded = true;
+                _isGrounded = true;
                 GroundNormal = groundNormal;
 
                 Vector3 alongPlaneVector = Vector3.Cross(groundNormal, upDirection);
