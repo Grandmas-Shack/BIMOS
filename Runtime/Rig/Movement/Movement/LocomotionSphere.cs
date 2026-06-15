@@ -16,6 +16,7 @@ namespace KadenZombie8.BIMOS.Rig.Movement
         private SphereCollider _collider;
         private Quaternion _linearToAngularRotation = Quaternion.Euler(0f, 90f, 0f);
         private Grounding _grounding;
+        private readonly Vector3 _inertiaTensorRate = 60f * Vector3.one;
 
         private void Awake()
         {
@@ -39,7 +40,7 @@ namespace KadenZombie8.BIMOS.Rig.Movement
             if (targetLinearVelocity.sqrMagnitude < 0.1f && !_grounding.IsSlipping)
                 _rigidbody.inertiaTensor = Vector3.zero;
             else
-                _rigidbody.ResetInertiaTensor();
+                _rigidbody.inertiaTensor = _inertiaTensorRate * Time.fixedDeltaTime;
         }
     }
 }

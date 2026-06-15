@@ -72,5 +72,6 @@ BIMOS was my A-level computer science project. I created it to use in VR games t
 - Bound to 144 Hz physics rate (jump height varies when changed)
 - Feet jitter on moving platforms
 - No haptics
+- No flatscreen gamepad UI navigation (mouse required)
 # Attribution
 Under the MIT license, you are allowed to do whatever you want with BIMOS, even for commercial purposes. Attribution is not required, but if this project has helped you and you want to show gratitude then it would be nice to have "KadenZombie8" in the credits of your game(s)!

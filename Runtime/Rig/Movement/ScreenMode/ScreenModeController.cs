@@ -14,6 +14,9 @@ namespace KadenZombie8.BIMOS.Rig.Movement
         public bool IsDepthUnlocked { get; private set; }
 
         [SerializeField]
+        private Handedness _handedness;
+
+        [SerializeField]
         private InputActionReference _moveReference;
 
         [SerializeField]
@@ -40,9 +43,6 @@ namespace KadenZombie8.BIMOS.Rig.Movement
         [SerializeField]
         private InputActionReference _cycleReference;
 
-        [SerializeField]
-        private bool _isLeftHand;
-
         private Transform _camera;
 
         private enum LockState
@@ -66,7 +66,7 @@ namespace KadenZombie8.BIMOS.Rig.Movement
 
         private void Awake()
         {
-            if (!_isLeftHand)
+            if (_handedness == Handedness.Right)
             {
                 _defaultPosition.x *= -1f;
                 _defaultRotation.x *= -1f;
@@ -79,8 +79,12 @@ namespace KadenZombie8.BIMOS.Rig.Movement
             _camera = Camera.main.transform;
 
             _unlockPositionReference.action.Enable();
+            _resetPositionReference.action.Enable();
             _scrollReference.action.Enable();
             _unlockRotationReference.action.Enable();
+            _resetRotationReference.action.Enable();
+            _unlockDepthReference.action.Enable();
+            _unlockReference.action.Enable();
             _cycleReference.action.Enable();
         }
 

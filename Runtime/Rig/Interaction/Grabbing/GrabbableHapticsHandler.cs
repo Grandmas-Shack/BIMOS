@@ -17,8 +17,11 @@ namespace KadenZombie8.BIMOS.Rig
         public void SendHapticImpulse(float amplitude, float duration)
         {
             foreach (Grabbable grabbable in Grabbables) {
+                if (!grabbable) return;
+
                 if (grabbable.LeftHand)
                     grabbable.LeftHand.SendHapticImpulse(amplitude, duration);
+
                 if (grabbable.RightHand)
                     grabbable.RightHand.SendHapticImpulse(amplitude, duration);
             }

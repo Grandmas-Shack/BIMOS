@@ -7,6 +7,7 @@ namespace KadenZombie8.BIMOS.Rig.Movement
     /// Draws the shapes of the hexabody configuration
     /// for easier debugging.
     /// </summary>
+    [RequireComponent(typeof(PhysicsRig))]
     public class DebugShapes : MonoBehaviour
     {
         public InputAction Action;
@@ -28,7 +29,7 @@ namespace KadenZombie8.BIMOS.Rig.Movement
 
         private PhysicsRigColliders _colliders;
 
-        private void Start() => _colliders = BIMOSRig.Instance.PhysicsRig.Colliders;
+        private void Start() => _colliders = GetComponent<PhysicsRig>().Colliders;
 
         private void OnEnable()
         {

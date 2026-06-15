@@ -9,6 +9,9 @@ namespace KadenZombie8.BIMOS.Rig
         public ArmPhysicsBone LowerArm;
         public HandPhysicsBone Hand;
 
+        [SerializeField]
+        private Animator _animator;
+
         public abstract class Segment
         {
             public HumanBodyBones Bone;
@@ -93,12 +96,9 @@ namespace KadenZombie8.BIMOS.Rig
 
         private void Start()
         {
-            var rig = BIMOSRig.Instance;
-            var animator = rig.AnimationRig.Animator;
-
-            UpperArm.Initialize(animator, UpperArm.Bone);
-            LowerArm.Initialize(animator, UpperArm.Bone);
-            Hand.Initialize(animator, UpperArm.Bone);
+            UpperArm.Initialize(_animator, UpperArm.Bone);
+            LowerArm.Initialize(_animator, UpperArm.Bone);
+            Hand.Initialize(_animator, UpperArm.Bone);
 
             LowerArm.Collider.height -= LowerArm.Collider.radius;
             LowerArm.Collider.center += LowerArm.Collider.radius / 2f * Vector3.down;

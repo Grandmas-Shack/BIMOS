@@ -28,8 +28,8 @@
                     "name": "Crouch",
                     "type": "Value",
                     "id": "27542ca4-d83e-47d7-a421-ebf7f09ba4de",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
+                    "expectedControlType": "Axis",
+                    "processors": "AxisDeadzone(min=0.75)",
                     "interactions": "",
                     "initialStateCheck": true
                 },
@@ -46,8 +46,8 @@
                     "name": "Turn",
                     "type": "Value",
                     "id": "346b7e6b-1e31-41b1-911b-8fd2da7a532f",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
+                    "expectedControlType": "Axis",
+                    "processors": "AxisDeadzone(min=0.75)",
                     "interactions": "",
                     "initialStateCheck": true
                 }
@@ -188,7 +188,7 @@
                 {
                     "name": "",
                     "id": "aff55c56-2163-4b73-8c33-b98f31be1443",
-                    "path": "<XRController>{RightHand}/thumbstick",
+                    "path": "<XRController>{RightHand}/thumbstick/Y",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -199,7 +199,7 @@
                 {
                     "name": "",
                     "id": "6c773cb6-99c8-4f3a-b71d-af692897720c",
-                    "path": "<ViveController>{RightHand}/trackpad",
+                    "path": "<ViveController>{RightHand}/trackpad/Y",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -210,7 +210,7 @@
                 {
                     "name": "Gamepad",
                     "id": "0f354014-94f3-408b-bf33-ffb858fdc9ae",
-                    "path": "2DVector",
+                    "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -219,7 +219,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "down",
+                    "name": "Negative",
                     "id": "463b4338-d69f-4fb5-b5b3-9d76faa9056c",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
@@ -230,9 +230,20 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "Positive",
+                    "id": "fdb850f3-7f8b-48e0-b6b0-b62fe3c6591c",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "Keyboard",
                     "id": "573fac48-ff2b-4892-8a7a-73d7065475a0",
-                    "path": "2DVector",
+                    "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -241,9 +252,20 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "down",
+                    "name": "Negative",
                     "id": "1e1ffb5f-fa59-4d26-a083-765e5cfbd9af",
                     "path": "<Keyboard>/leftCtrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Positive",
+                    "id": "ba24f5ed-5550-4df1-934e-8fc23b9a5075",
+                    "path": "",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -298,7 +320,7 @@
                 {
                     "name": "",
                     "id": "2a71f396-b272-46e8-8247-976af92067f0",
-                    "path": "<XRController>{RightHand}/thumbstick",
+                    "path": "<XRController>{RightHand}/thumbstick/X",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -309,7 +331,7 @@
                 {
                     "name": "",
                     "id": "10ad4e3b-908c-4554-a4ac-8586482375ab",
-                    "path": "<ViveController>{RightHand}/trackpad",
+                    "path": "<ViveController>{RightHand}/trackpad/X",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -324,7 +346,7 @@
             "id": "35423bfc-cc1b-4625-81be-6899c33f250c",
             "actions": [
                 {
-                    "name": "Trigger",
+                    "name": "TriggerValue",
                     "type": "PassThrough",
                     "id": "905c524c-8a4b-4f3c-847a-dfe2c0f064a9",
                     "expectedControlType": "",
@@ -414,7 +436,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Menu",
+                    "name": "ToggleMenu",
                     "type": "Button",
                     "id": "465e4c32-3a13-46f3-abdf-2b27e0141983",
                     "expectedControlType": "",
@@ -431,7 +453,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Trigger",
+                    "action": "TriggerValue",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -442,7 +464,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Trigger",
+                    "action": "TriggerValue",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -453,7 +475,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Trigger",
+                    "action": "TriggerValue",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -494,17 +516,6 @@
                     "name": "",
                     "id": "e6cfa495-c499-48b3-96ba-4320d04b094b",
                     "path": "<XRController>{LeftHand}/triggerTouched",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TriggerTouched",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "4dcbbfa6-d8cd-4fa5-8deb-ac1917af8447",
-                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -662,7 +673,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Menu",
+                    "action": "ToggleMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -673,29 +684,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Menu",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3395bf84-0bbe-44e4-bc24-20ed31d3c173",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Menu",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "43954881-9994-4b01-bede-8547666b1398",
-                    "path": "<Gamepad>/start",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Menu",
+                    "action": "ToggleMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -706,7 +695,7 @@
             "id": "50307f8b-a843-4725-9d33-d4d04a2efb60",
             "actions": [
                 {
-                    "name": "Trigger",
+                    "name": "TriggerValue",
                     "type": "PassThrough",
                     "id": "8a3d47c8-75f2-45eb-87fd-b95e04837e39",
                     "expectedControlType": "",
@@ -804,7 +793,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Trigger",
+                    "action": "TriggerValue",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -815,7 +804,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Trigger",
+                    "action": "TriggerValue",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -826,7 +815,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Trigger",
+                    "action": "TriggerValue",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -867,17 +856,6 @@
                     "name": "",
                     "id": "8e0705cf-4050-4753-9ff5-6e1810d5967b",
                     "path": "<XRController>{RightHand}/triggerTouched",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TriggerTouched",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "dd73ff42-312e-491b-916d-14f0d828572b",
-                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1168,6 +1146,15 @@
                     "processors": "",
                     "interactions": "MultiTap(tapDelay=0.2),Tap",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ToggleFlatMenu",
+                    "type": "Button",
+                    "id": "6aa47a75-4379-45c6-87e6-c1320cded077",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1379,6 +1366,28 @@
                     "action": "Scroll",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "a636931f-55a8-4447-96d7-18e2d5cf0b3f",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleFlatMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e3a9e5c9-d521-4afc-b6de-a8f0e00bc61f",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleFlatMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

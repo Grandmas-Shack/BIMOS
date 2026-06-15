@@ -6,6 +6,7 @@ namespace KadenZombie8.BIMOS.Rig.Movement
     /// <summary>
     /// Turn type with stepped rotation
     /// </summary>
+    [RequireComponent(typeof(VirtualTurning))]
     public class SnapTurn : MonoBehaviour
     {
         [Tooltip("The angle (in degrees) the player turns when they move the turn stick horizontally")]
@@ -15,33 +16,21 @@ namespace KadenZombie8.BIMOS.Rig.Movement
         private ControllerRig _controllerRig;
         private bool _isTurning;
 
-        #region Enabling and disabling
-        private void OnEnable()
-        {
-            _virtualTurning.TurnEvent += Turn;
-        }
+        private void OnEnable() => _virtualTurning.TurnEvent += Turn;
 
-        private void OnDisable()
-        {
-            _virtualTurning.TurnEvent -= Turn;
-        }
-        #endregion
+        private void OnDisable() => _virtualTurning.TurnEvent -= Turn;
 
         private void Awake()
         {
             _virtualTurning = GetComponent<VirtualTurning>();
+            _controllerRig = _virtualTurning.ControllerRig;
         }
 
-        private void Start()
+        private void Turn(float direction)
         {
-            _controllerRig = BIMOSRig.Instance.ControllerRig;
-        }
-
-        private void Turn(Vector2 vector)
-        {
-            var turnVector = vector.x;
+            var turnVector = direction;
             var wasTurning = _isTurning;
-            _isTurning = Mathf.Abs(turnVector) > 0.75f;
+            _isTurning = turnVector != 0f;
 
             if (wasTurning || !_isTurning)
                 return;

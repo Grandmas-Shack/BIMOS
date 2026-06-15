@@ -2,11 +2,11 @@ using System;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 
-namespace KadenZombie8.BIMOS.Rig
+namespace KadenZombie8.BIMOS.Rig.Animation
 {
     public class AnimationRig : MonoBehaviour
     {
-        public Feet Feet;
+        public LegAnimation Feet;
 
         [HideInInspector]
         public float AvatarEyeHeight; //The headset's default height above the floor

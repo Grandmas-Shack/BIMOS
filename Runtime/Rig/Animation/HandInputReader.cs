@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
 
 #if UNITY_WEBGL
 using WebXR;
@@ -36,6 +37,13 @@ namespace KadenZombie8.BIMOS.Rig
             SecondaryTouchedAction,
             SecondaryButtonAction,
             ThumbstickTouchedAction;
+
+        public bool MouseToggleGrip;
+        public bool GamepadToggleGrip;
+        public bool VRToggleGrip;
+
+        private bool _wasGripped;
+        private bool _isGripped;
 
         private void OnEnable()
         {
@@ -196,22 +204,47 @@ namespace KadenZombie8.BIMOS.Rig
 
         private void OnTriggerTouched(InputAction.CallbackContext callbackContext)
         {
-            TriggerTouched = callbackContext.performed ? true : false;
+            TriggerTouched = callbackContext.performed;
         }
 
         private void OnGrip()
         {
-            Grip = GripAction.action.ReadValue<float>();
+            var action = GripAction.action;
+            var value = action.ReadValue<float>();
+            var device = action.activeControl?.device;
+            var isGripped = value > 0.5f;
+
+            if (device is Mouse && MouseToggleGrip ||
+                device is Gamepad && GamepadToggleGrip ||
+                device is XRController && VRToggleGrip)
+            {
+                if (isGripped && !_wasGripped)
+                    _isGripped = !_isGripped;
+
+                if (device is not Mouse)
+                    Grip = _isGripped ? 1f : Mathf.Min(1f, value * 2f);
+                else
+                    Grip = _isGripped ? 1f : 0f;
+            }
+            else
+            {
+                Grip = value;
+            }
+
+            if (device is Mouse || device is Gamepad)
+                TriggerTouched = true;
+
+            _wasGripped = isGripped;
         }
 
         private void OnThumbrestTouched(InputAction.CallbackContext callbackContext)
         {
-            ThumbrestTouched = callbackContext.performed ? true : false;
+            ThumbrestTouched = callbackContext.performed;
         }
 
         private void OnPrimaryTouched(InputAction.CallbackContext callbackContext)
         {
-            PrimaryTouched = callbackContext.performed ? true : false;
+            PrimaryTouched = callbackContext.performed;
         }
 
         private void OnPrimaryButton(InputAction.CallbackContext callbackContext)
@@ -247,12 +280,9 @@ namespace KadenZombie8.BIMOS.Rig
 
         private void OnThumbstickTouched(InputAction.CallbackContext callbackContext)
         {
-            ThumbstickTouched = callbackContext.performed ? true : false;
+            ThumbstickTouched = callbackContext.performed;
         }
 
-        private bool IsButtonDown(InputAction.CallbackContext callbackContext)
-        {
-            return callbackContext.performed;
-        }
+        private bool IsButtonDown(InputAction.CallbackContext callbackContext) => callbackContext.performed;
     }
 }

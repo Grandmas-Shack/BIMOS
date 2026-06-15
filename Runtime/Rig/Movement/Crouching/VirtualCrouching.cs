@@ -2,6 +2,7 @@ using System;
 using KadenZombie8.BIMOS.Core.StateMachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
 
 namespace KadenZombie8.BIMOS.Rig.Movement
 {
@@ -15,9 +16,12 @@ namespace KadenZombie8.BIMOS.Rig.Movement
         [Tooltip("The speed (in %/s) the legs can extend/retract at")]
         public float CrouchSpeed = 2.5f;
 
+        [SerializeField]
+        private ControllerRig _controllerRig;
+
         public float CrouchInputMagnitude { get; set; }
 
-        public bool IsCrouchChanging => Mathf.Abs(CrouchInputMagnitude) >= 0.75f;
+        public bool IsCrouchChanging => CrouchInputMagnitude != 0f;
 
         public enum VirtualCrouchModeType
         {
@@ -25,15 +29,13 @@ namespace KadenZombie8.BIMOS.Rig.Movement
             Discrete,
             DiscreteToggle
         }
-        public VirtualCrouchModeType VirtualCrouchMode = VirtualCrouchModeType.Continuous;
+        private VirtualCrouchModeType _virtualCrouchMode;
 
         private Crouching _crouching;
         private Jumping _jumping;
-        private bool _wasCrouchChanging;
         private IState<JumpStateMachine> _standState;
         private IState<JumpStateMachine> _compressState;
         private IState<JumpStateMachine> _pushState;
-        private ControllerRig _controllerRig;
         private bool _isCrouching;
 
         private void Awake()
@@ -57,13 +59,20 @@ namespace KadenZombie8.BIMOS.Rig.Movement
 
         private void Crouch(InputAction.CallbackContext context)
         {
-            switch (VirtualCrouchMode)
+            var device = context.action.activeControl.device;
+
+            if (device is XRController)
+                _virtualCrouchMode = VirtualCrouchModeType.Continuous;
+            else if (device is Keyboard)
+                _virtualCrouchMode = VirtualCrouchModeType.Discrete;
+            else if (device is Gamepad)
+                _virtualCrouchMode = VirtualCrouchModeType.DiscreteToggle;
+
+            CrouchInputMagnitude = context.ReadValue<float>();
+
+            switch (_virtualCrouchMode)
             {
-                case VirtualCrouchModeType.Continuous:
-                    CrouchInputMagnitude = context.ReadValue<Vector2>().y;
-                    break;
                 case VirtualCrouchModeType.Discrete:
-                    CrouchInputMagnitude = context.ReadValue<Vector2>().y;
                     CrouchInputMagnitude = CrouchInputMagnitude < 0f ? -1f : 1f;
                     break;
                 case VirtualCrouchModeType.DiscreteToggle when context.performed:
@@ -78,7 +87,6 @@ namespace KadenZombie8.BIMOS.Rig.Movement
             _standState = _jumping.StateMachine.GetState<StandState>();
             _compressState = _jumping.StateMachine.GetState<CompressState>();
             _pushState = _jumping.StateMachine.GetState<PushState>();
-            _controllerRig = BIMOSRig.Instance.ControllerRig;
         }
 
         private void FixedUpdate()
@@ -86,10 +94,10 @@ namespace KadenZombie8.BIMOS.Rig.Movement
             var fullHeight = _crouching.StandingLegHeight - _crouching.CrouchingLegHeight;
 
             var isStanding = _jumping.StateMachine.CurrentState == _standState;
-            if (VirtualCrouchMode == VirtualCrouchModeType.Continuous || isStanding)
+            if (_virtualCrouchMode == VirtualCrouchModeType.Continuous || isStanding)
                 _crouching.TargetLegHeight += CrouchInputMagnitude * CrouchSpeed * fullHeight * Time.fixedDeltaTime;
 
-            if (VirtualCrouchMode == VirtualCrouchModeType.DiscreteToggle)
+            if (_virtualCrouchMode == VirtualCrouchModeType.DiscreteToggle)
             {
                 var isPushing = _jumping.StateMachine.CurrentState == _pushState;
                 if (isPushing)
@@ -104,7 +112,7 @@ namespace KadenZombie8.BIMOS.Rig.Movement
             float minLegHeight;
             float maxLegHeight;
 
-            if (VirtualCrouchMode == VirtualCrouchModeType.Continuous)
+            if (_virtualCrouchMode == VirtualCrouchModeType.Continuous)
             {
                 minLegHeight = _crouching.CrawlingLegHeight;
                 maxLegHeight = _crouching.StandingLegHeight + _crouching.TiptoesLegHeightGain;
@@ -112,7 +120,9 @@ namespace KadenZombie8.BIMOS.Rig.Movement
             else
             {
                 var neckYDifference = _controllerRig.Transforms.Camera.position.y - _controllerRig.Transforms.HeadCameraOffset.position.y;
-                minLegHeight = _crouching.CrawlingLegHeight - neckYDifference;
+                var minHeight = _jumping.LocomotionSphere.IsGrounded ? _crouching.CrouchingLegHeight : _crouching.CrawlingLegHeight;
+
+                minLegHeight = minHeight - neckYDifference;
                 maxLegHeight = _crouching.StandingLegHeight - neckYDifference - _controllerRig.Transforms.HeadCameraOffset.localPosition.y;
             }
 
@@ -121,14 +131,16 @@ namespace KadenZombie8.BIMOS.Rig.Movement
                 minLegHeight -= _jumping.AnticipationHeight;
                 maxLegHeight -= _jumping.AnticipationHeight;
             }
-            else if (!IsCrouchChanging && _wasCrouchChanging)
+            else
             {
-                minLegHeight = _crouching.CrouchingLegHeight;
-                maxLegHeight = _crouching.StandingLegHeight;
+                if (CrouchInputMagnitude >= 0f && _jumping.LocomotionSphere.IsGrounded)
+                    minLegHeight = _crouching.CrouchingLegHeight;
+
+                if (CrouchInputMagnitude <= 0f)
+                    maxLegHeight = _crouching.StandingLegHeight;
             }
 
             _crouching.TargetLegHeight = Mathf.Clamp(_crouching.TargetLegHeight, minLegHeight, maxLegHeight);
-            _wasCrouchChanging = IsCrouchChanging;
         }
     }
 }

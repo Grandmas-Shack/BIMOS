@@ -8,6 +8,11 @@ namespace KadenZombie8.BIMOS.Rig.Movement
     /// </summary>
     public class PhysicsRig : MonoBehaviour
     {
+        [SerializeField]
+        private string _rigLayerName = "BIMOSRig";
+
+        public BIMOSRig Rig { get; private set; }
+
         public PhysicsRigRigidbodies Rigidbodies;
         public PhysicsRigColliders Colliders;
         public PhysicsRigJoints Joints;
@@ -30,6 +35,7 @@ namespace KadenZombie8.BIMOS.Rig.Movement
 
         private void Awake()
         {
+            Rig = GetComponentInParent<BIMOSRig>();
             PlayerLayerMask = LayerMask.GetMask("Player");
             Crouching = GetComponent<Crouching>();
             Movement = GetComponent<SmoothLocomotion>();
@@ -40,7 +46,7 @@ namespace KadenZombie8.BIMOS.Rig.Movement
 
         private void SetRigidbodyLayers()
         {
-            _rigLayer = LayerMask.NameToLayer("BIMOSRig");
+            _rigLayer = LayerMask.NameToLayer(_rigLayerName);
             Physics.IgnoreLayerCollision(_rigLayer, _rigLayer);
 
             SetRigLayerRecursive(Rigidbodies.LocomotionSphere.gameObject);

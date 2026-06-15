@@ -33,7 +33,12 @@ namespace KadenZombie8.BIMOS.Rig.Movement
             _compressTime += Time.deltaTime;
 
             if (_jumpBuffer && _compressTime > _minCompressTime)
-                StateMachine.ChangeState<PushState>(); 
+            {
+                if (Jumping.LocomotionSphere.IsGrounded)
+                    StateMachine.ChangeState<PushState>();
+                else
+                    StateMachine.ChangeState<RecoverState>();
+            }
         }
 
         protected override void Exit()
